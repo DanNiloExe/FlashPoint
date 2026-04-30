@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- Define HTML5 -->
+
+<html lang="pt-br">
+<!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Suporte a acentos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade -->
+
+    <title>FlashPoint | filme1</title>
+    <!-- Nome da aba -->
+
+    <link rel="stylesheet" href="../../style.css">
+    <!-- CSS global (reutilizado do site inteiro) -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Fontes -->
+
+    <style>
+        /* ================= CONFIGURAÇÕES BASE ================= */
+        :root {
+            --text-width: 800px;       /* largura do texto */
+            --container-width: 1000px; /* largura geral */
+        }
+
+        /* Linhas separadoras */
+        header { border-bottom: 1px solid #222; }
+        nav { border-bottom: 1px solid #222; margin-bottom: 0; }
+
+        /* ================= TOPO DO ARTIGO ================= */
+        .article-hero {
+            background-color: #fff;
+            padding: 3rem 0 1rem 0;
+        }
+
+        .hero-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-meta-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* TÍTULO PRINCIPAL */
+        .title-area h1 {
+            font-size: 4rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        /* ================= BLOCO DE NOTA ================= */
+        .score-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .score-box {
+            background: #111;
+            color: var(--accent); /* cor principal do site */
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .score-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .score-txt {
+            font-size: 0.7rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* ================= INFORMAÇÕES (DATA / ID) ================= */
+        .meta-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .meta-info b { color: #111; }
+
+        /* ================= IMAGEM PRINCIPAL ================= */
+        .main-img-wrapper {
+            max-width: var(--container-width);
+            margin: 0 auto 3rem auto;
+            padding: 0 20px;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* ================= TEXTO ================= */
+        .article-body {
+            max-width: var(--text-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* BLOCO IMAGEM + TEXTO */
+        .split-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .split-content img {
+            width: 350px;
+            border-radius: 4px;
+        }
+
+        /* CITAÇÃO */
+        blockquote {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 4rem 0;
+            border-left: 8px solid var(--accent);
+            padding-left: 2rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .title-area h1 { font-size: 2.5rem; }
+            .split-content { flex-direction: column; }
+            .split-content img { width: 100%; }
+            .main-img { height: 300px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SISTEMA DE ABAS (mantido por padrão do site) -->
+    <input type="radio" name="tabs" id="home" checked>
+    <input type="radio" name="tabs" id="jogos">
+    <input type="radio" name="tabs" id="livros">
+    <input type="radio" name="tabs" id="filmes">
+    <input type="radio" name="tabs" id="series">
+    <input type="radio" name="tabs" id="musica">
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-flex">
+
+            <!-- Logo redireciona para home -->
+            <label class="logo-btn" onclick="window.location.href='../../index.html'">
+                <div class="logo">FLASH<span>POINT</span></div>
+            </label>
+
+            <p class="tagline">Resenhas rápidas, críticas ácidas.</p>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <div class="container nav-scroll">
+            <!-- Redirecionamento direto para abas da home -->
+            <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
+            <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
+            <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
+            <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
+            <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main class="main-wrapper">
+
+        <!-- HERO -->
+        <section class="article-hero">
+            <div class="hero-container">
+
+                <div class="header-meta-wrapper">
+
+                    <!-- BOTÃO VOLTAR -->
+                    <a href="../../index.html">← VOLTAR</a>
+
+                    <!-- TÍTULO -->
+                    <div class="title-area">
+                        <h1>filme1: Mais sangue, menos surpresas</h1>
+                        <!-- ALTERE AQUI -->
+                    </div>
+
+                    <!-- NOTA + INFO -->
+                    <div class="score-row">
+
+                        <div class="score-box">
+                            <span class="score-number">7.5</span>
+                            <!-- ALTERE A NOTA -->
+
+                            <span class="score-txt">FLASH<br>SCORE</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span><b>DATA:</b> 28 ABR, 2026</span>
+                            <span><b>ID:</b> FILME1</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMAGEM PRINCIPAL -->
+        <div class="main-img-wrapper">
+            <img src="URL_AQUI" class="main-img" alt="">
+            <!-- TROQUE A IMAGEM -->
+        </div>
+
+        <!-- TEXTO -->
+        <article class="article-body">
+
+            <p>Parágrafo inicial da review</p>
+
+            <!-- BLOCO VISUAL -->
+            <div class="split-content">
+                <img src="URL_AQUI">
+                <p>Texto explicando a cena</p>
+            </div>
+
+            <!-- FRASE DE IMPACTO -->
+            <blockquote>
+                "Frase forte aqui"
+            </blockquote>
+
+            <p>Conclusão da review</p>
+
+        </article>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container footer-content">
+
+            <div class="about-card">
+                <h3>SOBRE O AUTOR</h3>
+                <p>Seu texto</p>
+            </div>
+
+            <div class="footer-meta">
+                <p>FLASHPOINT &copy; 2026</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

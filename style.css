@@ -1,0 +1,308 @@
+/* ==========================================================================
+   VARIÁVEIS E BASE
+   ========================================================================== */
+:root {
+    --purple: #6a11cb;
+    --purple-dark: #25094d;
+    --green: #2ecc71;
+    --off-white: #f8f9fa;
+    --white: #ffffff;
+    --dark-text: #1a1a1e;
+    --gray-text: #4a4a4d;
+    --border: #e1e1e6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    background-color: #111; 
+    color: var(--gray-text); 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ==========================================================================
+   HEADER E NAVEGAÇÃO
+   ========================================================================== */
+header { background: #111; padding: 3.5rem 0; }
+.header-flex { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+
+.logo-btn { cursor: pointer; text-decoration: none; transition: transform 0.2s ease; display: inline-block; }
+.logo-btn:hover { transform: scale(1.03); }
+
+.logo { 
+    font-family: 'Barlow Condensed', sans-serif; 
+    font-size: 4rem; 
+    font-weight: 800; 
+    color: var(--white);
+    letter-spacing: -1px;
+}
+.logo span { color: var(--purple); }
+.tagline { color: var(--green); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 3px; font-weight: 700; }
+
+nav { 
+    background: #000; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    border-bottom: 4px solid var(--purple);
+}
+.nav-scroll { display: flex; overflow-x: auto; scrollbar-width: none; justify-content: center; }
+nav label {
+    padding: 1.2rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #888;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Lógica de Tabs */
+input[type="radio"] { display: none; }
+
+#home:checked ~ nav label[for="home"],
+#jogos:checked ~ nav label[for="jogos"],
+#livros:checked ~ nav label[for="livros"],
+#filmes:checked ~ nav label[for="filmes"],
+#series:checked ~ nav label[for="series"],
+#musica:checked ~ nav label[for="musica"] {
+    color: var(--green);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (MAIN WRAPPER)
+   ========================================================================== */
+.main-wrapper {
+    background-color: var(--off-white);
+    min-height: 80vh;
+    padding-bottom: 5rem;
+}
+
+.tab-content { display: none; animation: fadeIn 0.5s ease; padding-top: 4rem; }
+
+/* Exibição das abas */
+#home:checked ~ .main-wrapper #content-home,
+#jogos:checked ~ .main-wrapper #content-jogos,
+#livros:checked ~ .main-wrapper #content-livros,
+#filmes:checked ~ .main-wrapper #content-filmes,
+#series:checked ~ .main-wrapper #content-series,
+#musica:checked ~ .main-wrapper #content-musica,
+#detalhe-post:checked ~ .main-wrapper #content-detalhe { display: block; }
+
+/* Esconde nav ao ver detalhes */
+#detalhe-post:checked ~ nav { display: none; }
+
+/* Cabeçalhos de Seção */
+.section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; }
+.section-header h2 { 
+    font-family: 'Barlow Condensed', sans-serif; 
+    color: var(--dark-text); 
+    font-size: 2.2rem; 
+    text-transform: uppercase; 
+}
+.section-header .line { flex: 1; height: 2px; background: var(--purple); opacity: 0.2; }
+
+/* ==========================================================================
+   LAYOUTS DA HOME (NOVAS ÁREAS)
+   ========================================================================== */
+
+/* 1. Destaques Horizontais */
+.destaque-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.destaque-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+}
+.destaque-item h4 { color: var(--dark-text); font-size: 1.5rem; line-height: 1.2; margin-bottom: 0.5rem; }
+
+/* 2. Mosaico de Reviews (Estilo Minos) */
+.reviews-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+.main-review-card {
+    position: relative;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+}
+.main-review-card img { width: 100%; height: 520px; object-fit: cover; }
+.main-review-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 3rem 2rem 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+}
+.main-review-info h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; margin: 0.5rem 0; }
+
+.mini-reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.mini-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: 0.3s;
+}
+.mini-card:hover { transform: translateY(-5px); }
+.mini-card img { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+.mini-card span { font-weight: 800; font-size: 0.75rem; color: var(--dark-text); display: block; text-transform: uppercase; }
+
+/* 3. Artigos e Podcast */
+.extra-sections { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin-top: 4rem; }
+.artigos-list ul { list-style: none; }
+.artigos-list li { 
+    padding: 1.2rem 0; 
+    border-bottom: 1px solid var(--border); 
+    font-weight: 700; 
+    color: var(--purple);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.artigos-list li:hover { padding-left: 10px; color: var(--green); }
+
+.pod-card {
+    background: var(--dark-text);
+    color: var(--green);
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border-bottom: 5px solid var(--purple);
+}
+.pod-card span { font-weight: 800; font-size: 0.8rem; opacity: 0.7; }
+.pod-card p { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; color: white; margin-top: 0.5rem; }
+
+/* ==========================================================================
+   CARDS DE REVIEW (ABAS)
+   ========================================================================== */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.5rem; }
+
+.review-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+}
+.review-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+.card-media { position: relative; width: 100%; aspect-ratio: 16/9; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; }
+
+.score-badge {
+    position: absolute; bottom: 15px; right: 15px;
+    background: var(--dark-text); color: var(--green);
+    width: 50px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; border-radius: 50%; font-size: 1.1rem;
+}
+
+.card-info { padding: 1.8rem; }
+.category { color: var(--purple); font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.card-info h3 { color: var(--dark-text); margin: 0.6rem 0; font-size: 1.4rem; line-height: 1.2; }
+.card-info p { font-size: 0.95rem; color: var(--gray-text); margin-bottom: 1rem; }
+
+.card-footer { display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+.stars { color: #f1c40f; }
+.date { font-size: 0.75rem; font-weight: 700; color: #bbb; }
+
+/* ==========================================================================
+   PÁGINA DETALHADA (REVIEW COMPLETO)
+   ========================================================================== */
+.detail-view {
+    max-width: 1000px !important;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 40px rgba(0,0,0,0.05);
+}
+
+.detail-container { display: grid; grid-template-columns: 200px 1fr; gap: 3.5rem; }
+
+.detail-sidebar { position: sticky; top: 40px; height: fit-content; text-align: center; }
+.score-big { 
+    background: var(--dark-text); 
+    color: var(--green); 
+    font-size: 3rem; 
+    font-weight: 800; 
+    padding: 20px; 
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+.meta-sidebar p { font-size: 0.8rem; font-weight: 800; color: #bbb; margin-bottom: 0.5rem; text-transform: uppercase; }
+.meta-sidebar strong { color: var(--dark-text); display: block; }
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    color: var(--purple);
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.detail-banner { width: 100%; height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 2.5rem; }
+.detail-title { font-family: 'Barlow Condensed', sans-serif; font-size: 3.5rem; color: var(--dark-text); line-height: 1; margin-bottom: 2rem; }
+
+.rich-text p { font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.8rem; color: #333; }
+.rich-text blockquote {
+    border-left: 6px solid var(--purple);
+    padding: 1.5rem 2.5rem;
+    font-style: italic;
+    background: var(--off-white);
+    margin: 2.5rem 0;
+    font-size: 1.3rem;
+    color: var(--purple-dark);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer { background: #111; padding: 5rem 0 3rem; color: #888; }
+.about-card { 
+    background: #1a1a1e; 
+    padding: 3rem; 
+    border-radius: 15px; 
+    margin-bottom: 4rem; 
+    border-left: 5px solid var(--purple);
+}
+.about-card h3 { color: var(--white); margin-bottom: 1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; }
+.footer-meta { text-align: center; font-size: 0.8rem; letter-spacing: 2px; }
+
+/* ==========================================================================
+   ANIMAÇÕES E RESPONSIVIDADE
+   ========================================================================== */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 900px) {
+    .detail-container { grid-template-columns: 1fr; }
+    .detail-sidebar { position: static; display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; text-align: left; }
+    .score-big { margin-bottom: 0; }
+}
+
+@media (max-width: 768px) {
+    .logo { font-size: 3rem; }
+    .nav-scroll { justify-content: flex-start; }
+    .destaque-grid, .reviews-container, .extra-sections { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
+    .detail-banner { height: 250px; }
+    .detail-title { font-size: 2.2rem; }
+}

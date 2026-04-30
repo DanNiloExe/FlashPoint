@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashPoint | Review Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sistema de Navegação por Abas -->
+    <input type="radio" name="tabs" id="home" checked>
+    <input type="radio" name="tabs" id="jogos">
+    <input type="radio" name="tabs" id="livros">
+    <input type="radio" name="tabs" id="filmes">
+    <input type="radio" name="tabs" id="series">
+    <input type="radio" name="tabs" id="musica">
+
+    <header>
+        <div class="container header-flex">
+            <label for="home" class="logo-btn">
+                <div class="logo">FLASH<span>POINT</span></div>
+            </label>
+            <p class="tagline">Resenhas rápidas, críticas ácidas.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-scroll">
+            <label for="jogos">JOGOS</label>
+            <label for="livros">LIVROS</label>
+            <label for="filmes">FILMES</label>
+            <label for="series">SÉRIES</label>
+            <label for="musica">MÚSICA</label>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <div class="container">
+            
+            <!-- HOME / RECENTES -->
+            <section class="tab-content" id="content-home">
+                <div class="section-header"><h2>Recentes</h2><div class="line"></div></div>
+                <div class="card-grid">
+                    
+                    <!-- Hades 2 -->
+                    <a href="reviews/jogos/jogo1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/jogos/hades2_hero.png" alt="Hades 2">
+                                <div class="score-badge">9.8</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">JOGOS</span>
+                                <h3>Hades II</h3>
+                                <p>Melinoë prova que a Supergiant consegue superar a perfeição do primeiro título.</p>
+                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">29 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- Casamento Sangrento 2 -->
+                    <a href="reviews/filmes/filme1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/filmes/filme1_hero.png" alt="Casamento Sangrento 2">
+                                <div class="score-badge">7.5</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">FILMES</span>
+                                <h3>Casamento Sangrento 2</h3>
+                                <p>Mais tensão, mais sangue e o retorno triunfante de uma noiva.</p>
+                                <div class="card-footer"><span class="stars">★★★☆☆</span><span class="date">28 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- Devoradores de Estrelas -->
+                    <a href="reviews/livros/livro1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/livros/livro1_hero.png" alt="Devoradores de Estrelas">
+                                <div class="score-badge">9.5</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">LIVROS</span>
+                                <h3>Devoradores de Estrelas</h3>
+                                <p>Andy Weir entrega uma ficção científica otimista e tecnicamente impecável.</p>
+                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">27 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- ABA JOGOS -->
+            <section class="tab-content" id="content-jogos">
+                <div class="section-header"><h2>🎮 Jogos</h2><div class="line"></div></div>
+                <div class="card-grid">
+                    <a href="reviews/jogos/jogo1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/jogos/jogo1_hero.png" alt="Jogo 1">
+                                <div class="score-badge">9.8</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">JOGOS</span>
+                                <h3>Hades II</h3>
+                                <p>A sequência que expande o submundo com maestria artística e mecânica.</p>
+                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">29 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ABA LIVROS -->
+            <section class="tab-content" id="content-livros">
+                <div class="section-header"><h2>📚 Livros</h2><div class="line"></div></div>
+                <div class="card-grid">
+                    <a href="reviews/livros/livro1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/livros/livro1_hero.png" alt="Livro 1">
+                                <div class="score-badge">9.5</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">LIVROS</span>
+                                <h3>Devoradores de Estrelas</h3>
+                                <p>Uma jornada espacial que define o que há de melhor na ficção moderna.</p>
+                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">27 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ABA FILMES -->
+            <section class="tab-content" id="content-filmes">
+                <div class="section-header"><h2>🎬 Filmes</h2><div class="line"></div></div>
+                <div class="card-grid">
+                    <a href="reviews/filmes/filme1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/filmes/filme1_hero.png" alt="Filme 1">
+                                <div class="score-badge">7.5</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">FILMES</span>
+                                <h3>Casamento Sangrento 2</h3>
+                                <p>O retorno da sobrevivente favorita do horror moderno.</p>
+                                <div class="card-footer"><span class="stars">★★★☆☆</span><span class="date">28 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ABA SÉRIES -->
+            <section class="tab-content" id="content-series">
+                <div class="section-header"><h2>📺 Séries</h2><div class="line"></div></div>
+                <div class="card-grid">
+                    <a href="reviews/series/serie1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/series/serie1_hero.png" alt="Série 1">
+                                <div class="score-badge">9.0</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">SÉRIES</span>
+                                <h3>Alice in Borderland</h3>
+                                <p>Jogos mortais e dilemas morais em uma Tóquio vazia.</p>
+                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">26 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ABA MÚSICA -->
+            <section class="tab-content" id="content-musica">
+                <div class="section-header"><h2>🎧 Música</h2><div class="line"></div></div>
+                <div class="card-grid">
+                    <a href="reviews/musicas/musica1.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/images/musica/musica1_hero.png" alt="Música 1">
+                                <div class="score-badge">8.8</div>
+                            </div>
+                            <div class="card-info">
+                                <span class="category">ÁLBUNS</span>
+                                <h3>My World</h3>
+                                <p>Uma sonoridade que define uma era, agora revisitada.</p>
+                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">25 ABR</span></div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="about-card">
+                <h3>SOBRE O AUTOR</h3>
+                <p>Bibliotecário de formação e estudante de ADS.</p>
+            </div>
+            <div class="footer-meta"><p>FLASHPOINT &copy; 2026</p></div>
+        </div>
+    </footer>
+
+</body>
+</html>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- Define HTML5 -->
+
+<html lang="pt-br">
+<!-- Define idioma da página -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite acentos e caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade para celular -->
+
+    <title>FlashPoint | serie1</title>
+    <!-- Nome da aba -->
+
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Importa o CSS principal (repare no ../../ porque está em subpasta) -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Importa fontes -->
+
+    <style>
+        /* ================= CONFIGURAÇÕES GERAIS ================= */
+        :root {
+            --text-width: 800px;
+            /* Largura máxima do texto */
+
+            --container-width: 1000px;
+            /* Largura geral do layout */
+        }
+
+        header { border-bottom: 1px solid #222; }
+        nav { border-bottom: 1px solid #222; margin-bottom: 0; }
+        /* Linhas separando header e nav */
+
+        /* ================= HERO (TOPO DO ARTIGO) ================= */
+        .article-hero {
+            background-color: #fff;
+            padding: 3rem 0 1rem 0;
+            /* Espaçamento superior e inferior */
+        }
+
+        .hero-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            /* Centraliza conteúdo */
+        }
+
+        .header-meta-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            /* Espaçamento entre elementos */
+        }
+
+        .title-area h1 {
+            font-size: 4rem;
+            line-height: 1;
+            margin: 0.5rem 0;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #111;
+            /* Estilo do título principal */
+        }
+
+        /* ================= SCORE (NOTA) ================= */
+        .score-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .score-box {
+            background: #111;
+            color: var(--accent);
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* Caixa da nota */
+        }
+
+        .score-number {
+            font-size: 2.5rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+        }
+
+        .score-txt {
+            font-size: 0.7rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* ================= METADADOS ================= */
+        .meta-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .meta-info b { color: #111; }
+        /* Destaca "DATA", "ID", etc */
+
+        /* ================= IMAGEM PRINCIPAL ================= */
+        .main-img-wrapper {
+            max-width: var(--container-width);
+            margin: 0 auto 3rem auto;
+            padding: 0 20px;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            /* Faz a imagem preencher sem distorcer */
+            border-radius: 4px;
+        }
+
+        /* ================= CORPO DO TEXTO ================= */
+        .article-body {
+            max-width: var(--text-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* ================= BLOCO COM IMAGEM + TEXTO ================= */
+        .split-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .split-content img {
+            width: 350px;
+            border-radius: 4px;
+        }
+
+        /* ================= CITAÇÃO ================= */
+        blockquote {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 4rem 0;
+            color: #111;
+            border-left: 8px solid var(--accent);
+            padding-left: 2rem;
+        }
+
+        /* ================= RESPONSIVO ================= */
+        @media (max-width: 768px) {
+            .title-area h1 { font-size: 2.5rem; }
+
+            .split-content { flex-direction: column; }
+            /* Empilha no mobile */
+
+            .split-content img { width: 100%; }
+
+            .main-img { height: 300px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SISTEMA DE ABAS (igual ao index, mas aqui serve só pra navegação) -->
+    <input type="radio" name="tabs" id="home" checked>
+    <input type="radio" name="tabs" id="jogos">
+    <input type="radio" name="tabs" id="livros">
+    <input type="radio" name="tabs" id="filmes">
+    <input type="radio" name="tabs" id="series">
+    <input type="radio" name="tabs" id="musica">
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-flex">
+
+            <!-- Logo clicável -->
+            <label for="home" class="logo-btn" onclick="window.location.href='../../index.html'">
+                <!-- onclick redireciona pra home -->
+                <div class="logo">FLASH<span>POINT</span></div>
+            </label>
+
+            <p class="tagline">Resenhas rápidas, críticas ácidas.</p>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <div class="container nav-scroll">
+
+            <!-- Cada botão redireciona pra aba específica na home -->
+            <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
+            <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
+            <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
+            <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
+            <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
+
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-wrapper">
+
+        <!-- HERO DO ARTIGO -->
+        <section class="article-hero">
+            <div class="hero-container">
+
+                <div class="header-meta-wrapper">
+
+                    <!-- Botão voltar -->
+                    <a href="../../index.html" style="text-decoration:none; color:var(--accent); font-weight:800;">
+                        ← VOLTAR
+                    </a>
+
+                    <!-- TÍTULO -->
+                    <div class="title-area">
+                        <h1>serie1: Xeque-mate na sanidade</h1>
+                        <!-- Aqui você altera o título -->
+                    </div>
+
+                    <!-- NOTA + INFO -->
+                    <div class="score-row">
+
+                        <div class="score-box">
+                            <span class="score-number">9.0</span>
+                            <!-- Nota -->
+
+                            <span class="score-txt">FLASH<br>SCORE</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span><b>DATA:</b> 26 ABR, 2026</span>
+                            <span><b>ID:</b> SERIE1</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMAGEM PRINCIPAL -->
+        <div class="main-img-wrapper">
+            <img src="URL_DA_IMAGEM" class="main-img" alt="Banner Série">
+            <!-- Troque a URL aqui -->
+        </div>
+
+        <!-- TEXTO DO ARTIGO -->
+        <article class="article-body">
+
+            <p>
+                <!-- Parágrafo comum -->
+                A adaptação continua elevando o nível de tensão...
+            </p>
+
+            <!-- BLOCO COM IMAGEM + TEXTO -->
+            <div class="split-content">
+                <img src="URL_IMAGEM" alt="">
+                <p>Texto relacionado à imagem</p>
+            </div>
+
+            <!-- CITAÇÃO DESTACADA -->
+            <blockquote>
+                "Cada jogo é uma metáfora brutal..."
+            </blockquote>
+
+            <p>
+                Outro parágrafo final...
+            </p>
+
+        </article>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container footer-content">
+
+            <div class="about-card">
+                <h3>SOBRE O AUTOR</h3>
+                <p>Seu texto aqui</p>
+            </div>
+
+            <div class="footer-meta">
+                <p>FLASHPOINT &copy; 2026</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
