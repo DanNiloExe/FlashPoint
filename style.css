@@ -26,7 +26,10 @@ body {
 /* ==========================================================================
    HEADER E NAVEGAÇÃO
    ========================================================================== */
-header { background: #111; padding: 3.5rem 0; }
+header { 
+    background: #111; 
+    padding: 1.5rem 0; /* Diminuído de 3.5rem para 1.5rem */
+}
 .header-flex { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
 
 .logo-btn { cursor: pointer; text-decoration: none; transition: transform 0.2s ease; display: inline-block; }
@@ -306,3 +309,190 @@ footer { background: #111; padding: 5rem 0 3rem; color: #888; }
     .detail-banner { height: 250px; }
     .detail-title { font-size: 2.2rem; }
 }
+
+
+
+
+
+
+/* ==========================================================================
+   PÁGINAS DE ARTIGO (EX: FLASHPOINT DETALHE)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Paragrafos de texto
+   ========================================================================== */
+
+.texto-justificado {
+    text-align: justify;
+}
+
+/* BOTÃO VOLTAR COMPACTO */
+.back-btn {
+    display: inline-flex;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--dark-text);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    white-space: nowrap; /* Impede que o texto "VOLTAR" quebre em duas linhas */
+    margin-bottom: 0.5rem; /* Ajuste fino para alinhar visualmente com a base do H1 */
+}
+
+/* No Mobile, talvez você queira que eles voltem a ficar um em cima do outro */
+@media (max-width: 768px) {
+    .title-area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.back-btn:hover {
+    background-color: var(--purple);
+    transform: translateX(-3px);
+}
+
+/* ================= CONFIG BASE ================= */
+        :root {
+            --text-width: 800px;        /* largura do texto */
+            --container-width: 1000px;  /* largura do layout */
+        }
+
+        /* Header e menu (mesmo padrão do index) */
+        header { border-bottom: 1px solid #222; }
+        nav { border-bottom: 1px solid #222; margin-bottom: 0; }
+
+        /* ================= TOPO DO ARTIGO ================= */
+        .article-hero {
+            background-color: #fff;
+            padding: 3rem 0 1rem 0;
+        }
+
+        .hero-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            /* Centraliza conteúdo */
+        }
+
+        /* Organização geral do topo */
+        .header-meta-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* TÍTULO */
+        .title-area h1 {
+            font-size: 4rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        /* ================= NOTA ================= */
+        .score-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .score-box {
+            background: #111;
+            color: var(--accent); /* cor principal do site */
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .score-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .score-txt {
+            font-size: 0.7rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* INFO (data / id) */
+        .meta-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .meta-info b { color: #111; }
+
+        /* ================= IMAGEM PRINCIPAL ================= */
+        .main-img-wrapper {
+            max-width: var(--container-width);
+            margin: 0 auto 3rem auto;
+            padding: 0 20px;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover; /* evita distorção */
+            border-radius: 4px;
+        }
+
+        /* ================= TEXTO ================= */
+        .article-body {
+            max-width: var(--text-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* BLOCO COM IMAGEM + TEXTO */
+        .split-content {
+    display: flex;
+    flex-direction: column; /* Empilha imagem e texto verticalmente */
+    align-items: center;    /* Centraliza horizontalmente tudo que está dentro */
+    gap: 2rem;              /* Espaço entre a imagem e o texto abaixo dela */
+    margin: 3rem 0;         /* Espaço em relação aos parágrafos de cima e de baixo */
+}
+
+       .split-content img {
+    width: 100%;            /* Ajusta à largura do contêiner de texto */
+    max-width: 600px;       /* Define um limite para a imagem não ficar gigante */
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+        /* FRASE DE DESTAQUE */
+        blockquote {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            font-color: blue;
+            border-left: 8px solid var(--accent);
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .title-area h1 { font-size: 2.5rem; }
+            .split-content { flex-direction: column; }
+            .split-content img { width: 100%; }
+            .main-img { height: 300px; }
+        }
