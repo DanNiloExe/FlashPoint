@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<!-- Define HTML5 -->
-
 <html lang="pt-br">
-<!-- Idioma da página -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite acentos -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade -->
+    <title>Darkest Dungeon | FlashPoint</title>
 
-    <title>unknowz | FlashPoint</title>
-    <!-- Nome da aba -->
-
+    <!-- Fontes e Estilos -->
     <link rel="stylesheet" href="../../style.css">
-    <!-- CSS global do site -->
-
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Fontes -->
-
-
 </head>
 
 <body>
 
-    <!-- Inputs herdados do sistema do index -->
+    <!-- BARRA DE PROGRESSO (Fixa no topo) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- LOGICA DE NAVEGAÇÃO (Inputs herdados) -->
     <input type="radio" name="tabs" id="home" checked>
     <input type="radio" name="tabs" id="jogos">
     <input type="radio" name="tabs" id="livros">
@@ -33,126 +26,201 @@
     <input type="radio" name="tabs" id="series">
     <input type="radio" name="tabs" id="musica">
 
-    <!-- HEADER -->
+    <!-- === HEADER === -->
     <header>
         <div class="container header-flex">
-
-            <!-- Logo leva pra home -->
             <label class="logo-btn" onclick="window.location.href='../../index.html'">
                 <div class="logo">FLASH<span>POINT</span></div>
             </label>
-
             <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
         </div>
     </header>
 
-    <!-- MENU -->
+    <!-- === MENU DE NAVEGAÇÃO === -->
     <nav>
         <div class="container nav-scroll">
-
-            <!-- Links para categorias -->
             <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
             <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
             <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
             <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
             <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
-
         </div>
     </nav>
 
-    <!-- CONTEÚDO -->
     <main class="main-wrapper">
 
-        <!-- TOPO DO ARTIGO -->
+        <!-- === CABEÇALHO DO ARTIGO (Hero) === -->
         <section class="article-hero">
             <div class="hero-container">
-
                 <div class="header-meta-wrapper">
-                        <!-- BOTÃO VOLTAR -->
-                    <a href="../../index.html">← VOLTAR</a>
                     
-
-                    <!-- TÍTULO -->
+                    <a href="../../index.html" class="back-btn">← VOLTAR</a>
+                    
                     <div class="title-area">
                         <h1>Darkest Dungeon</h1>
                         <h2>Um combate em turnos insano que testará seu limite ao máximo</h2>
                         
-                                                <!-- Botão voltar -->
-                                        
-                        
-                        <!-- ALTERE AQUI -->
+                        <!-- Tags de Caracterização -->
+                        <div class="article-tags">
+                            <span class="tag">Combate em Turnos</span>
+                            <span class="tag">Lovecraftiano</span>
+                            <span class="tag">Rogue-like</span>
+                            <span class="tag">Difícil</span>
+                        </div>
+
+                        <!-- Ficha Técnica -->
+                        <div class="technical-sheet">
+                            <div class="sheet-item"><strong>DESENVOLVEDORA:</strong> Red Hook Studios</div>
+                            <div class="sheet-item"><strong>PLATAFORMA:</strong> PC, PS4, Switch, Xbox</div>
+                            <div class="sheet-item"><strong>GÊNERO:</strong> RPG, Estratégia</div>
+                            <div class="sheet-item"><strong>TEMPO DE JOGO:</strong> 50h+ (Campanha)</div>
+                        </div>
                     </div>
 
-                    <!-- NOTA -->
-                    <div class="score-row">
+                        <!-- Bloco de Disponibilidade -->
+                        <div class="availability-card">
+                            <span class="availability-label">DISPONÍVEL PARA:</span>
+                            <div class="availability-platforms">
+                                <span class="platform-chip"><i class="icon-play">PC</i> </span>
+                                <span class="platform-chip"><i class="icon-play">PS4</i> </span>
+                                <span class="platform-chip"><i class="icon-play">Switch</i> </span>
+                                <span class="platform-chip"><i class="icon-play">Xbox</i>  </span>
+                            </div>
+                        </div>
 
+                    <!-- Bloco de Nota e Meta Info -->
+                    <div class="score-row">
                         <div class="score-box">
                             <span class="score-number">9</span>
-                            <!-- ALTERE A NOTA -->
-
-                            <span class="score-txt">Nota<br> Flash <br></span>
+                            <span class="score-txt">Nota<br> Flash</span>
                         </div>
 
-                        <!-- INFO -->
                         <div class="meta-info">
-                            <span><b>DATA:</b> 12 MAI, 2026</span>
+                            <span><b style="color: var(--purple);">⏱</b> 4 MIN DE LEITURA</span>
+                            <span><b>DATA:</b> 9 MAI, 2026</span>
                             <span><b>ID:</b> darkest-dungeon</span>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- IMAGEM PRINCIPAL -->
+        <!-- === IMAGEM DE DESTAQUE === -->
         <div class="main-img-wrapper">
-            <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\jogos\darkest-dungeon\darkest-dungeon-header.avif" class="main-img" alt="">
-            <!-- TROQUE A IMAGEM -->
+            <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-header.avif" class="main-img" alt="Darkest Dungeon Banner">
         </div>
 
-        <!-- TEXTO -->
+        <!-- === CORPO DO TEXTO === -->
         <article class="article-body">
 
-            <p class="texto-justificado">   Aventure-se em uma curta e cooperativa aventura com dois piratas (um vivo, e outro nem tanto) nesse simples, porém
-                entretivel jogo de plataforma. E como em todo jogo do gênero enfrente inimigos, resolva puzzles, e se estresse com seu companheiro marujo
-                enquanto passeia pelos cenários coloridos e praianos em alto mar.</p>
+            <p class="texto-justificado">Aventure-se em uma curta e cooperativa aventura com dois piratas (um vivo, e outro nem tanto) nesse simples, porém entretivel jogo de plataforma. E como em todo jogo do gênero enfrente inimigos, resolva puzzles, e se estresse com seu companheiro marujo enquanto passeia pelos cenários coloridos e praianos em alto mar.</p>
 
-            <!-- BLOCO COM IMAGEM -->
+            <!-- Imagem Intermediária -->
             <div class="split-content">
-                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\jogos\unknowz\unknowz-ingame.jpg">
-                <p class="texto-justificado">   Como nem sempre da pra ir a praia sem se queimar com o sol, nem tudo é um dia ensolarado em Unknowz,
-                    a movimentação dos personagens, principalmente no pulo, deixa um pouco a desejar na responsividade do comando, e a movimentação
-                    dos personagens acaba ficando bem desengonçada, ei não é por que são piratas que eles tem que se movimentar como bebados certo?</p>
+                <img src="assets/imagens/jogos/unknowz/darkest-dungeon-image-1.jpg" alt="Gameplay Unknowz">
             </div>
 
-            <!-- FRASE DE IMPACTO -->
+            <p class="texto-justificado">Como nem sempre da pra ir a praia sem se queimar com o sol, nem tudo é um dia ensolarado em Unknowz, a movimentação dos personagens, principalmente no pulo, deixa um pouco a desejar na responsividade do comando, e a movimentação dos personagens acaba ficando bem desengonçada. Ei, não é por que são piratas que eles tem que se movimentar como bebados certo?</p>
+
+            <!-- Galeria de Screenshots -->
+            <div class="article-gallery">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-1.jpg" alt="Screenshot 1" onclick="window.open(this.src)">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-2.jpg" alt="Screenshot 2" onclick="window.open(this.src)">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-3.jpg" alt="Screenshot 3" onclick="window.open(this.src)">
+            </div>
+
+            <!-- Citação / Frase de Impacto -->
             <blockquote>
                 "Simples, curto, bonito e que tal jogar um barril de pólvora no X?"
             </blockquote>
 
-            <p class="texto-justificado">   Por mais que possua alguns crimes em alto mar, Unknowz ainda assim é uma aventura que vale a pena ser tripulada
-                pois sendo rápida garante um entretimento justo a você e mais um marinheiro que esteja disposto a navegar nessas águas, e claro o jogo é gratis
-                então o que está esperando para ver o que a maré vai lhe trazer hoje?
-            </p>
+            <p class="texto-justificado">Por mais que possua alguns crimes em alto mar, Unknowz ainda assim é uma aventura que vale a pena ser tripulada pois sendo rápida garante um entretimento justo a você e mais um marinheiro que esteja disposto a navegar nessas águas, e claro o jogo é gratis então o que está esperando para ver o que a maré vai lhe trazer hoje?</p>
+
+            <!-- Resumo Prós e Contras -->
+            <div class="pros-cons-container">
+                <div class="pc-box pros">
+                    <h4><i class="icon">✔</i> O QUE É BOM</h4>
+                    <ul>
+                        <li>Atmosfera opressora e arte gótica impecável.</li>
+                        <li>Sistema de combate profundo e estratégico.</li>
+                        <li>Narrativa ambiental e narração icônica.</li>
+                    </ul>
+                </div>
+                <div class="pc-box cons">
+                    <h4><i class="icon">✖</i> O QUE NÃO É BOM</h4>
+                    <ul>
+                        <li>Fator sorte (RNG) pode ser frustrante às vezes.</li>
+                        <li>Grind excessivo para subir novos heróis.</li>
+                        <li>Curva de aprendizado punitiva para iniciantes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assinatura -->
+            <div class="author-signature">
+                <p>Escrito por <strong>Danilo José</strong></p>
+                <div class="sig-line"></div>
+            </div>
 
         </article>
     </main>
 
-    <!-- RODAPÉ -->
+    <!-- === INTERAÇÃO E COMPARTILHAMENTO === -->
+    <div class="container">
+        <div class="share-box">
+            <span>CURTIU? COMPARTILHE:</span>
+            <div class="share-icons">
+                <a href="#" class="share-btn">Twitter</a>
+                <a href="#" class="share-btn">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- === SEÇÃO DE COMENTÁRIOS === -->
+    <section class="comments-section">
+        <div class="container-comments">
+            <h3>Discussão e Opiniões</h3>
+            <div class="comment-form">
+                <textarea placeholder="O que você achou dessa obra?"></textarea>
+                <button class="btn-comment">Publicar Comentário</button>
+            </div>
+            
+            <div class="comments-list">
+                <div class="comment-item">
+                    <div class="comment-avatar"></div>
+                    <div class="comment-content">
+                        <span class="comment-user">Visitante Extraordinário</span>
+                        <p>Esse jogo realmente testa a nossa sanidade, mas a arte é impecável!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === RODAPÉ === -->
     <footer>
         <div class="container footer-content">
-
             <div class="about-card">
                 <h3>SOBRE O AUTOR</h3>
-                <p>Seu texto</p>
+                <p>Seu texto aqui sobre sua paixão por jogos e cultura pop.</p>
             </div>
-
             <div class="footer-meta">
                 <p>FLASHPOINT &copy; 2026</p>
             </div>
-
         </div>
     </footer>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 
 </body>
 </html>

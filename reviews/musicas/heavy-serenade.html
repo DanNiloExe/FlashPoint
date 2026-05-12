@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<!-- Define HTML5 -->
-
 <html lang="pt-br">
-<!-- Idioma -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Acentuação -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsivo -->
+    <title>Heavy Serenade | FlashPoint</title>
 
-    <title>FlashPoint | musica1</title>
-    <!-- Nome da aba -->
-
+    <!-- Fontes e Estilos -->
     <link rel="stylesheet" href="../../style.css">
-    <!-- CSS global do site -->
-
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Fontes -->
-
-   
 </head>
 
 <body>
 
-    <!-- Sistema herdado do index -->
+    <!-- BARRA DE PROGRESSO (Fixa no topo) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- LOGICA DE NAVEGAÇÃO -->
     <input type="radio" name="tabs" id="home" checked>
     <input type="radio" name="tabs" id="jogos">
     <input type="radio" name="tabs" id="livros">
@@ -33,111 +26,200 @@
     <input type="radio" name="tabs" id="series">
     <input type="radio" name="tabs" id="musica">
 
-    <!-- HEADER -->
+    <!-- === HEADER === -->
     <header>
         <div class="container header-flex">
-
-            <!-- Logo (volta pra home) -->
             <label class="logo-btn" onclick="window.location.href='../../index.html'">
                 <div class="logo">FLASH<span>POINT</span></div>
             </label>
-
             <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
         </div>
     </header>
 
-    <!-- MENU -->
+    <!-- === MENU DE NAVEGAÇÃO === -->
     <nav>
         <div class="container nav-scroll">
-
-            <!-- Links para categorias -->
             <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
             <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
             <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
             <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
             <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
-
         </div>
     </nav>
 
-    <!-- CONTEÚDO -->
     <main class="main-wrapper">
 
-        <!-- TOPO -->
+        <!-- === CABEÇALHO DO ARTIGO (Hero) === -->
         <section class="article-hero">
             <div class="hero-container">
-
                 <div class="header-meta-wrapper">
-
-                    <!-- BOTÃO VOLTAR -->
-                    <a href="../../index.html">← VOLTAR</a>
-
-                    <!-- TÍTULO -->
+                    
+                    <a href="../../index.html" class="back-btn">← VOLTAR</a>
+                    
                     <div class="title-area">
                         <h1>Heavy Serenade</h1>
-                        <!-- ALTERE AQUI -->
+                        <h2>O equilíbrio perfeito entre o peso do metal e a melodia clássica.</h2>
+                        
+                        <!-- Tags de Caracterização -->
+                        <div class="article-tags">
+                            <span class="tag">Heavy Metal</span>
+                            <span class="tag">Sinfônico</span>
+                            <span class="tag">Melódico</span>
+                            <span class="tag">Épico</span>
+                        </div>
+
+                        <!-- Ficha Técnica -->
+                        <div class="technical-sheet">
+                            <div class="sheet-item"><strong>ARTISTA:</strong> Iron Echoes</div>
+                            <div class="sheet-item"><strong>GRAVADORA:</strong> Sonic Pulse Records</div>
+                            <div class="sheet-item"><strong>GÊNERO:</strong> Metal Sinfônico</div>
+                            <div class="sheet-item"><strong>DURAÇÃO:</strong> 52min (12 faixas)</div>
+                        </div>
                     </div>
 
-                    <!-- NOTA -->
-                    <div class="score-row">
+                        <!-- Bloco de Disponibilidade -->
+                        <div class="availability-card">
+                            <span class="availability-label">ESCUTE NO:</span>
+                            <div class="availability-platforms">
+                                <span class="platform-chip"><i class="icon-play"></i> Spotify</span>
+                                <span class="platform-chip"><i class="icon-play"></i> Apple Music</span>
+                                <span class="platform-chip"><i class="icon-play"></i> Youtube Music</span>
 
+                            </div>
+                        </div>
+
+                    <!-- Bloco de Nota e Meta Info -->
+                    <div class="score-row">
                         <div class="score-box">
                             <span class="score-number">9</span>
-                            <!-- ALTERE A NOTA -->
+                            <span class="score-txt">Nota<br> Flash</span>
                         </div>
 
                         <div class="meta-info">
-                            <span><b>DATA:</b> 12 MAI, 2026</span>
+                            <span><b style="color: var(--purple);">⏱</b> 4 MIN DE LEITURA</span>
+                            <span><b>DATA:</b> 11 MAI, 2026</span>
                             <span><b>ID:</b> MUSICA1</span>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- IMAGEM PRINCIPAL -->
+        <!-- === IMAGEM DE DESTAQUE === -->
         <div class="main-img-wrapper">
-            <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\musica\heavy-serenade\heavy-serenade-header.jpg" class="main-img">
-            <!-- TROQUE A IMAGEM -->
+            <img src="assets/imagens/musica/heavy-serenade/heavy-serenade-header.jpg" class="main-img" alt="Heavy Serenade Album Cover">
         </div>
 
-        <!-- TEXTO -->
+        <!-- === CORPO DO TEXTO === -->
         <article class="article-body">
 
-            <p>Introdução da review</p>
+            <p class="texto-justificado">Preparar os ouvidos para um álbum que tenta misturar guitarras distorcidas com arranjos de cordas é sempre um risco, mas <i>Heavy Serenade</i> faz isso parecer fácil. Desde os primeiros acordes, fica claro que não estamos ouvindo apenas barulho; há uma estrutura pensada para te levar em uma jornada que alterna entre a fúria de um mosh pit e a contemplação de um teatro de ópera. É denso, mas extremamente acessível para quem gosta de música bem produzida.</p>
 
-            <!-- BLOCO VISUAL -->
+            <!-- Bloco Visual Split -->
             <div class="split-content">
-                <img src="URL_AQUI">
-                <p>Explicação da produção sonora</p>
+                <img src="assets/imagens/musica/heavy-serenade/heavy-serenade-studio.jpg" alt="Bastidores da Produção">
+                <p class="texto-justificado">A produção sonora aqui é o grande destaque. Cada bumbo de bateria tem um impacto físico, enquanto os violinos flutuam sobre a massa sonora sem nunca serem engolidos pelos riffs. É um trabalho técnico de mixagem que merece ser ouvido em um bom fone de ouvido. As transições entre as faixas são orgânicas, fazendo com que o álbum funcione como uma obra única, e não apenas uma coleção de singles perdidos.</p>
             </div>
 
-            <!-- FRASE -->
+            <!-- Galeria de Screenshots -->
+            <div class="article-gallery">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-1.jpg" alt="Screenshot 1" onclick="window.open(this.src)">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-2.jpg" alt="Screenshot 2" onclick="window.open(this.src)">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-3.jpg" alt="Screenshot 3" onclick="window.open(this.src)">
+            </div>
+
+            <!-- Citação -->
             <blockquote>
-                "Frase de impacto"
+                "Uma parede de som que não te esmaga, te abraça com a força de uma orquestra de metal."
             </blockquote>
 
-            <p>Conclusão</p>
+            <p class="texto-justificado">Em suma, este trabalho redefine o que esperamos de bandas que flertam com o clássico sem perder a essência do rock pesado. <i>Heavy Serenade</i> entrega exatamente o que o título promete: uma serenata vigorosa, técnica e cheia de alma. Se você busca algo para elevar a energia enquanto aprecia camadas complexas de áudio, dê o play sem medo.</p>
+
+            <!-- Resumo Prós e Contras -->
+            <div class="pros-cons-container">
+                <div class="pc-box pros">
+                    <h4><i class="icon">✔</i> O QUE É BOM</h4>
+                    <ul>
+                        <li>Mixagem cristalina que valoriza todos os instrumentos.</li>
+                        <li>Equilíbrio perfeito entre o vocal lírico e o gutural.</li>
+                        <li>Arranjos de orquestra que não soam artificiais.</li>
+                    </ul>
+                </div>
+                <div class="pc-box cons">
+                    <h4><i class="icon">✖</i> O QUE NÃO É BOM</h4>
+                    <ul>
+                        <li>Algumas faixas intermediárias soam um pouco genéricas.</li>
+                        <li>A duração total pode ser cansativa para ouvintes casuais.</li>
+                        <li>Pouca variação de tempo (BPM) entre as músicas principais.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assinatura -->
+            <div class="author-signature">
+                <p>Escrito por <strong>Danilo José</strong></p>
+                <div class="sig-line"></div>
+            </div>
 
         </article>
     </main>
 
-    <!-- RODAPÉ -->
+    <!-- === INTERAÇÃO === -->
+    <div class="container">
+        <div class="share-box">
+            <span>CURTIU? COMPARTILHE:</span>
+            <div class="share-icons">
+                <a href="#" class="share-btn">Twitter</a>
+                <a href="#" class="share-btn">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- === SEÇÃO DE COMENTÁRIOS === -->
+    <section class="comments-section">
+        <div class="container-comments">
+            <h3>Discussão e Opiniões</h3>
+            <div class="comment-form">
+                <textarea placeholder="O que você achou dessa obra?"></textarea>
+                <button class="btn-comment">Publicar Comentário</button>
+            </div>
+            
+            <div class="comments-list">
+                <div class="comment-item">
+                    <div class="comment-avatar"></div>
+                    <div class="comment-content">
+                        <span class="comment-user">Visitante Extraordinário</span>
+                        <p>A sexta faixa é simplesmente de arrepiar! O trabalho de bateria está em outro nível.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === RODAPÉ === -->
     <footer>
         <div class="container footer-content">
-
             <div class="about-card">
                 <h3>SOBRE O AUTOR</h3>
-                <p>Seu texto</p>
+                <p>Danilo José é bibliotecário e entusiasta da tecnologia, unindo a organização da informação com a paixão pela cultura pop e o desenvolvimento web.</p>
             </div>
-
             <div class="footer-meta">
                 <p>FLASHPOINT &copy; 2026</p>
             </div>
-
         </div>
     </footer>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 
 </body>
 </html>

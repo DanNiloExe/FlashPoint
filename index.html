@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- ====================META / CONFIGURAÇÕES BASE=================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashPoint | Review Hub</title>
+    <!-- ====================TÍTULO========================= -->
+    <title>FlashPoint</title>
+
+    <!-- ===============ESTILOS E FONTES================ -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Sistema de Navegação por Abas -->
+    <!-- ===============SISTEMA DE NAVEGAÇÃO POR ABAS============================= -->
     <input type="radio" name="tabs" id="home" checked>
     <input type="radio" name="tabs" id="jogos">
     <input type="radio" name="tabs" id="livros">
@@ -17,266 +22,387 @@
     <input type="radio" name="tabs" id="series">
     <input type="radio" name="tabs" id="musica">
 
+    <!-- ============HEADER=================================== -->
     <header>
         <div class="container header-flex">
-            <label for="home" class="logo-btn">
+            <!-- LOGO / BOTÃO HOME -->
+            <label for="home" class="logo-btn" onclick="window.location.href='index.html'">
                 <div class="logo">FLASH<span>POINT</span></div>
             </label>
-            <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
+
+            <!-- TAGLINE -->
+            <p class="tagline">
+                Resenhas rápidas, leves e bem humoradas.
+            </p>
         </div>
     </header>
 
+    <!-- ==========MENU DE NAVEGAÇÃO==================== -->
     <nav>
         <div class="container nav-scroll">
+
             <label for="jogos">JOGOS</label>
             <label for="livros">LIVROS</label>
             <label for="filmes">FILMES</label>
             <label for="series">SÉRIES</label>
             <label for="musica">MÚSICA</label>
+
         </div>
     </nav>
 
+    <!-- ===============CONTEÚDO PRINCIPAL============================= -->
     <main class="main-wrapper">
         <div class="container">
-            
-            <!-- HOME / RECENTES -->
+
+
+            <!-- ==============HOME / RECENTES===================================== -->
             <section class="tab-content" id="content-home">
-                <div class="section-header"><h2>Recentes</h2><div class="line"></div></div>
+
+                <!-- CABEÇALHO DA SESSÃO -->
+                <div class="section-header">
+                    <h2>Recentes</h2>
+                    <div class="line"></div>
+                </div>
+
+                <!-- GRID DE CARDS -->
                 <div class="card-grid">
 
-                                        <!-- Palm Srings -->
+                    <!-- ========CARD — PALM SPRINGS==================================== -->
                     <a href="reviews/filmes/palm-springs.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\palm-springs\palm-springs-header.png" alt="Palm Springs">
+                                <img src="assets/imagens/filmes/palm-springs/palm-springs-header.png" alt="Palm Springs">
                                 <div class="score-badge">9</div>
                             </div>
+
                             <div class="card-info">
                                 <span class="category">FILMES</span>
                                 <h3>Palm Springs</h3>
-                                <p>Loop temporal inovador até mesmo para feitiço do tempo.</p>
-                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">11 MAI</span></div>
+                                <p>Loop temporal inovador até mesmo para feitiço do tempo. </p>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">11 MAI</span>
+                                </div>
                             </div>
                         </article>
                     </a>
 
-                    <!-- Heavy Serenade -->
-                  <a href="reviews/musicas/heavy-serenade.html" class="card-link">
+                    <!-- ========CARD — HEAVY SERENADE============================== -->
+                    <a href="reviews/musicas/heavy-serenade.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\musica\heavy-serenade\heavy-serenade-header.jpg" alt="Música 1">
+                                <img src="assets/imagens/musica/heavy-serenade/heavy-serenade-header.jpg" alt="Heavy Serenade">
                                 <div class="score-badge">9</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">ÁLBUNS</span>
-                                <h3>Heavy-Serenade</h3>
-                                <p>Nmixx traz em seu novo ep uma sonoridade melodica e digna de arrepios.</p>
-                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">12 MAI</span></div>
+                                <h3>Heavy Serenade</h3>
+                                <p>Nmixx traz em seu novo EP uma sonoridade melódica e digna de arrepios. </p>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">11 MAI</span>
+                                </div>
                             </div>
                         </article>
                     </a>
 
-                                <!-- Darkest Dungeon -->
+                    <!-- =====CARD — DARKEST DUNGEON======================================= -->
                     <a href="reviews/jogos/darkest-dungeon.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-header.avif" alt="darkest-dungeon">
+                                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-header.avif" alt="Darkest Dungeon">
                                 <div class="score-badge">9</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">JOGOS</span>
                                 <h3>Darkest Dungeon</h3>
                                 <p>Aprenda como amar odiar um jogo que testará sua sanidade até o último combate.</p>
-                                <div class="card-footer"><span class="stars">★★★★</span><span class="date">12 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">09 MAI</span>
+                                </div>
                             </div>
                         </article>
                     </a>
 
-                    <!-- O Diabo Veste Prada 2 -->
                     <a href="reviews/filmes/o-diabo-veste-prada-2.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\o-diabo-veste-prada-2\o-diabo-veste-prada-2-header.webp" alt="Casamento Sangrento 2">
+                                <img src="assets/imagens/filmes/o-diabo-veste-prada-2/o-diabo-veste-prada-2-header.webp" alt="Casamento Sangrento 2">
                                 <div class="score-badge">8.5</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">FILMES</span>
                                 <h3>O Diabo Veste Prada 2</h3>
                                 <p>Revisite o mundo da moda junto com as alfinetadas tão sutis quanto ao novo padrão estético.</p>
-                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">07 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">07 MAI</span></div>
                             </div>
                         </article>
                     </a>
 
-                    <!-- unknowz -->
-                    <a href="reviews/jogos/unknowz.html" class="card-link">
+                            <a href="reviews/jogos/unknowz.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="assets/imagens/jogos/unknowz/unknowz-header.jpg" alt="unknowz">
+                                <img src="assets/imagens/jogos/unknowz/unknowz-header.jpg" alt="Unknowz">
                                 <div class="score-badge">6.5</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">JOGOS</span>
                                 <h3>Unknowz</h3>
                                 <p>Aventure-se com um amigo em coop plataforma com temática piratesca.</p>
-                                <div class="card-footer"><span class="stars">★★★</span><span class="date">03 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★☆☆</span>
+                                    <span class="date">03 MAI</span>
+                                </div>
                             </div>
                         </article>
                     </a>
 
                 </div>
+
             </section>
 
-            <!-- ABA JOGOS -->
+            <!-- ==========ABA — JOGOS=========================== -->
             <section class="tab-content" id="content-jogos">
-                <div class="section-header"><h2>🎮 Jogos</h2><div class="line"></div></div>
+                <div class="section-header">
+                    <h2>Jogos</h2>
+                    <div class="line"></div>
+                </div>
                 <div class="card-grid">
+
+                    <!-- CARD — UNKNOWZ -->
                     <a href="reviews/jogos/unknowz.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="assets/imagens/jogos/unknowz/unknowz-header.jpg" alt="unknowz">
+                                <img src="assets/imagens/jogos/unknowz/unknowz-header.jpg" alt="Unknowz">
                                 <div class="score-badge">6.5</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">JOGOS</span>
                                 <h3>Unknowz</h3>
                                 <p>Aventure-se com um amigo em coop plataforma com temática piratesca.</p>
-                                <div class="card-footer"><span class="stars">★★★</span><span class="date">03 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★☆☆</span>
+                                    <span class="date">03 MAI</span>
+                                </div>
                             </div>
                         </article>
                     </a>
 
-                 <a href="reviews/jogos/darkest-dungeon.html" class="card-link">
+                    <a href="reviews/jogos/darkest-dungeon.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-header.avif" alt="darkest-dungeon">
+                                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-header.avif" alt="Darkest Dungeon">
                                 <div class="score-badge">9</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">JOGOS</span>
                                 <h3>Darkest Dungeon</h3>
                                 <p>Aprenda como amar odiar um jogo que testará sua sanidade até o último combate.</p>
-                                <div class="card-footer"><span class="stars">★★★★</span><span class="date">12 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">09 MAI</span>
+                                </div>
                             </div>
                         </article>
                     </a>
+
+            
+
                 </div>
+
             </section>
 
-            <!-- ABA LIVROS -->
+            <!-- =============ABA — LIVROS=============================== -->
             <section class="tab-content" id="content-livros">
-                <div class="section-header"><h2>📚 Livros</h2><div class="line"></div></div>
+                <div class="section-header">
+                    <h2>Livros</h2>
+                    <div class="line"></div>
+                </div>
+
                 <div class="card-grid">
-                    <a href="reviews/livros/livro1.html" class="card-link">
+                    <!-- CARD — DEVORADORES DE ESTRELAS -->
+                    <a href="reviews/livros/devoradores-de-estrelas.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="assets/images/livros/livro1_hero.png" alt="Livro 1">
+                                <img src="assets/imagens/livros/devoradores-de-estrelas/devoradores-header.png" alt="Devoradores de Estrelas">
                                 <div class="score-badge">9.5</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">LIVROS</span>
                                 <h3>Devoradores de Estrelas</h3>
                                 <p>Uma jornada espacial que define o que há de melhor na ficção moderna.</p>
-                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">27 ABR</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="date">27 ABR</span>
+                                </div>
                             </div>
                         </article>
                     </a>
+
                 </div>
+
             </section>
 
-            <!-- ABA FILMES -->
+            <!-- ==== ABA — FILMES=============================================== -->
             <section class="tab-content" id="content-filmes">
-                <div class="section-header"><h2>🎬 Filmes</h2><div class="line"></div></div>
+                <div class="section-header">
+                    <h2>Filmes</h2>
+                    <div class="line"></div>
+                </div>
+
                 <div class="card-grid">
+                    <!-- CARD — O DIABO VESTE PRADA 2 -->
                     <a href="reviews/filmes/o-diabo-veste-prada-2.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\o-diabo-veste-prada-2\o-diabo-veste-prada-2-header.webp" alt="Casamento Sangrento 2">
+                                <img src="assets/imagens/filmes/o-diabo-veste-prada-2/o-diabo-veste-prada-2-header.webp" alt="Casamento Sangrento 2">
                                 <div class="score-badge">8.5</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">FILMES</span>
                                 <h3>O Diabo Veste Prada 2</h3>
                                 <p>Revisite o mundo da moda junto com as alfinetadas tão sutis quanto ao novo padrão estético.</p>
-                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">07 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">07 MAI</span></div>
                             </div>
                         </article>
                     </a>
 
-                                        <!-- Palm Srings -->
-                    <a href="reviews/filmes/palm-springs.html" class="card-link">
+                    <!-- CARD — PALM SPRINGS -->
+                     <a href="reviews/filmes/palm-springs.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\palm-springs\palm-springs-header.png" alt="Palm Springs">
+                                <img src="assets/imagens/filmes/palm-springs/palm-springs-header.png" alt="Palm Springs">
                                 <div class="score-badge">9</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">FILMES</span>
                                 <h3>Palm Springs</h3>
                                 <p>Loop temporal inovador até mesmo para feitiço do tempo.</p>
-                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">11 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">11 MAI</span></div>
                             </div>
                         </article>
                     </a>
 
                 </div>
+
             </section>
 
-            <!-- ABA SÉRIES -->
+            <!-- ==========================================================================
+               ABA — SÉRIES
+               ========================================================================== -->
             <section class="tab-content" id="content-series">
-                <div class="section-header"><h2>📺 Séries</h2><div class="line"></div></div>
+
+                <div class="section-header">
+
+                    <h2>Séries</h2>
+
+                    <div class="line"></div>
+
+                </div>
+
                 <div class="card-grid">
-                    <a href="reviews/series/serie1.html" class="card-link">
+
+                    <!-- CARD — ALICE IN BORDERLAND -->
+                     <a href="reviews/series/serie1.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="assets/images/series/serie1_hero.png" alt="Série 1">
+                                <img src="assets/imagens/series/serie1_hero.png" alt="Série 1">
                                 <div class="score-badge">9.0</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">SÉRIES</span>
                                 <h3>Alice in Borderland</h3>
                                 <p>Jogos mortais e dilemas morais em uma Tóquio vazia.</p>
-                                <div class="card-footer"><span class="stars">★★★★★</span><span class="date">26 ABR</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="date">26 ABR</span></div>
                             </div>
                         </article>
                     </a>
+
                 </div>
+
             </section>
 
-            <!-- ABA MÚSICA -->
+            <!-- ==========================================================================
+               ABA — MÚSICA
+               ========================================================================== -->
             <section class="tab-content" id="content-musica">
-                <div class="section-header"><h2>🎧 Música</h2><div class="line"></div></div>
+
+                <div class="section-header">
+
+                    <h2>Música</h2>
+
+                    <div class="line"></div>
+
+                </div>
+
                 <div class="card-grid">
-                    <a href="reviews/musicas/musica1.html" class="card-link">
+
+                    <!-- CARD — HEAVY SERENADE -->
+                     <a href="reviews/musicas/heavy-serenade.html" class="card-link">
                         <article class="review-card">
                             <div class="card-media">
-                                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\musica\heavy-serenade\heavy-serenade-header.jpg" alt="Música 1">
+                                <img src="assets/imagens/musica/heavy-serenade/heavy-serenade-header.jpg" alt="Música 1">
                                 <div class="score-badge">9</div>
                             </div>
                             <div class="card-info">
                                 <span class="category">ÁLBUNS</span>
                                 <h3>Heavy-Serenade</h3>
                                 <p>Nmixx traz em seu novo ep uma sonoridade melodica e digna de arrepios.</p>
-                                <div class="card-footer"><span class="stars">★★★★☆</span><span class="date">12 MAI</span></div>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="date">11 MAI</span></div>
                             </div>
                         </article>
                     </a>
+
                 </div>
             </section>
 
         </div>
     </main>
 
+    <!-- ==========================================================================
+       RODAPÉ
+       ========================================================================== -->
     <footer>
         <div class="container footer-content">
             <div class="about-card">
                 <h3>SOBRE O AUTOR</h3>
                 <p>Bibliotecário de formação e estudante de ADS.</p>
             </div>
-            <div class="footer-meta"><p>FLASHPOINT &copy; 2026</p></div>
+
+            <div class="footer-meta">
+                <p>FLASHPOINT &copy; 2026</p>
+            </div>
         </div>
     </footer>
 
+    <!-- ==========================================================================
+       SCRIPT — DETECÇÃO DE HASH DA URL
+       Permite abrir o index diretamente em uma aba específica
+       Exemplo:
+       index.html#jogos
+       ========================================================================== -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const hash = window.location.hash.replace("#", "");
+            if(hash) {
+                const targetRadio = document.getElementById(hash);
+                if(targetRadio) {
+                    targetRadio.checked = true;
+                }
+            }
+        });
+    </script>
+
 </body>
-</html>
 </html>

@@ -1,164 +1,24 @@
 <!DOCTYPE html>
-<!-- Define HTML5 -->
-
 <html lang="pt-br">
-<!-- Idioma da página -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Suporte a acentos -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade -->
+    <title>O Diabo Veste Prada 2 | FlashPoint</title>
 
-    <title>FlashPoint | O Diabo Veste Prada 2</title>
-    <!-- Nome da aba -->
-
+    <!-- Fontes e Estilos -->
     <link rel="stylesheet" href="../../style.css">
-    <!-- CSS global (reutilizado do site inteiro) -->
-
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Fontes -->
-
-    <style>
-        /* ================= CONFIGURAÇÕES BASE ================= */
-        :root {
-            --text-width: 800px;       /* largura do texto */
-            --container-width: 1000px; /* largura geral */
-        }
-
-        /* Linhas separadoras */
-        header { border-bottom: 1px solid #222; }
-        nav { border-bottom: 1px solid #222; margin-bottom: 0; }
-
-        /* ================= TOPO DO ARTIGO ================= */
-        .article-hero {
-            background-color: #fff;
-            padding: 3rem 0 1rem 0;
-        }
-
-        .hero-container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .header-meta-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        /* TÍTULO PRINCIPAL */
-        .title-area h1 {
-            font-size: 4rem;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: #111;
-        }
-
-        /* ================= BLOCO DE NOTA ================= */
-        .score-row {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .score-box {
-            background: #111;
-            color: var(--accent); /* cor principal do site */
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .score-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-        }
-
-        .score-txt {
-            font-size: 0.7rem;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        /* ================= INFORMAÇÕES (DATA / ID) ================= */
-        .meta-info {
-            display: flex;
-            gap: 2rem;
-            font-size: 0.75rem;
-            color: #888;
-            text-transform: uppercase;
-        }
-
-        .meta-info b { color: #111; }
-
-        /* ================= IMAGEM PRINCIPAL ================= */
-        .main-img-wrapper {
-            max-width: var(--container-width);
-            margin: 0 auto 3rem auto;
-            padding: 0 20px;
-        }
-
-        .main-img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
-        /* ================= TEXTO ================= */
-        .article-body {
-            max-width: var(--text-width);
-            margin: 0 auto;
-            padding: 0 20px;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        /* BLOCO IMAGEM + TEXTO */
-        .split-content {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-            margin: 3rem 0;
-        }
-
-        .split-content img {
-            width: 350px;
-            border-radius: 4px;
-        }
-
-        /* CITAÇÃO */
-        blockquote {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 4rem 0;
-            border-left: 8px solid var(--accent);
-            padding-left: 2rem;
-        }
-
-        /* RESPONSIVO */
-        @media (max-width: 768px) {
-            .title-area h1 { font-size: 2.5rem; }
-            .split-content { flex-direction: column; }
-            .split-content img { width: 100%; }
-            .main-img { height: 300px; }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- SISTEMA DE ABAS (mantido por padrão do site) -->
+    <!-- BARRA DE PROGRESSO -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- LOGICA DE NAVEGAÇÃO -->
     <input type="radio" name="tabs" id="home" checked>
     <input type="radio" name="tabs" id="jogos">
     <input type="radio" name="tabs" id="livros">
@@ -166,23 +26,19 @@
     <input type="radio" name="tabs" id="series">
     <input type="radio" name="tabs" id="musica">
 
-    <!-- HEADER -->
+    <!-- === HEADER === -->
     <header>
         <div class="container header-flex">
-
-            <!-- Logo redireciona para home -->
             <label class="logo-btn" onclick="window.location.href='../../index.html'">
                 <div class="logo">FLASH<span>POINT</span></div>
             </label>
-
             <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
         </div>
     </header>
 
-    <!-- MENU -->
+    <!-- === MENU DE NAVEGAÇÃO === -->
     <nav>
         <div class="container nav-scroll">
-            <!-- Redirecionamento direto para abas da home -->
             <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
             <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
             <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
@@ -191,97 +47,169 @@
         </div>
     </nav>
 
-    <!-- CONTEÚDO -->
     <main class="main-wrapper">
 
-        <!-- HERO -->
+        <!-- === CABEÇALHO DO ARTIGO (Hero) === -->
         <section class="article-hero">
             <div class="hero-container">
-
                 <div class="header-meta-wrapper">
-
-                    <!-- BOTÃO VOLTAR -->
-                    <a href="../../index.html">← VOLTAR</a>
-
-                    <!-- TÍTULO -->
+                    
+                    <a href="../../index.html" class="back-btn">← VOLTAR</a>
+                    
                     <div class="title-area">
                         <h1>O Diabo Veste Prada 2</h1>
                         <h2>De volta ao mundo da moda e da boa costura com muitas alfinetadas.</h2>
-                        <!-- ALTERE AQUI -->
-                    </div>
+                        
+                        <!-- Tags de Caracterização -->
+                        <div class="article-tags">
+                            <span class="tag">Comédia</span>
+                            <span class="tag">Drama</span>
+                            <span class="tag">Moda</span>
+                            <span class="tag">Sequência</span>
+                        </div>
 
-                    <!-- NOTA + INFO -->
+                        <!-- Ficha Técnica -->
+                        <div class="technical-sheet">
+                            <div class="sheet-item"><strong>DIREÇÃO:</strong> David Frankel</div>
+                            <div class="sheet-item"><strong>ELENCO:</strong> Meryl Streep, Anne Hathaway, Emily Blunt</div>
+                            <div class="sheet-item"><strong>GÊNERO:</strong> Comédia Dramática</div>
+                            <div class="sheet-item"><strong>DURAÇÃO:</strong> ~120min</div>
+                        </div>
+
+                        <!-- Bloco de Disponibilidade -->
+                        <div class="availability-card">
+                            <span class="availability-label">ONDE ASSISTIR:</span>
+                            <div class="availability-platforms">
+                                <span class="platform-chip"><i class="icon-play"></i> Cinemas</span>
+                            </div>
+                        </div>
+
+                    <!-- Bloco de Nota e Meta Info -->
                     <div class="score-row">
-
                         <div class="score-box">
                             <span class="score-number">8.5</span>
-                            <!-- ALTERE A NOTA -->
-
-                            <span class="score-txt">Nota<br>Flash</span>
+                            <span class="score-txt">Nota<br> Flash</span>
                         </div>
 
                         <div class="meta-info">
+                            <span><b style="color: var(--purple);">⏱</b> 3 MIN DE LEITURA</span>
                             <span><b>DATA:</b> 07 MAI, 2026</span>
-                            <span><b>ID:</b> O Diabo Veste Prada 2</span>
+                            <span><b>ID:</b> o-diabo-veste-prada-2</span>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- IMAGEM PRINCIPAL -->
+        <!-- === IMAGEM DE DESTAQUE === -->
         <div class="main-img-wrapper">
-            <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\o-diabo-veste-prada-2\o-diabo-veste-prada-2-header.webp" class="main-img" alt="">
-            <!-- TROQUE A IMAGEM -->
+            <img src="assets/imagens/filmes/o-diabo-veste-prada-2/o-diabo-veste-prada-2-header.webp" class="main-img" alt="O Diabo Veste Prada 2 Banner">
         </div>
 
-        <!-- TEXTO -->
+        <!-- === CORPO DO TEXTO === -->
         <article class="article-body">
 
-            <p class="texto-justificado">Com um 1° filme tão bom esperava-se que essa fosse uma daquelas continuações que ninguém pediu, mas que, surpreendentemente, não é uma peça de se jogar fora. 
-                A sequência do clássico de 20 anos atrás traz uma história bem alinhada com a era digital (e trabalhista?) sem abrir mão da sofisticação e daquele
-                tratamento passivo-agressivo que a gente já ama odiar. É o tipo de filme que prova que, se o roteiro for bom, a nostalgia nunca sai de moda.
-            </p>
+            <p class="texto-justificado">Com um 1° filme tão bom esperava-se que essa fosse uma daquelas continuações que ninguém pediu, mas que, surpreendentemente, não é uma peça de se jogar fora. A sequência do clássico de 20 anos atrás traz uma história bem alinhada com a era digital (e trabalhista?) sem abrir mão da sofisticação e daquele tratamento passivo-agressivo que a gente já ama odiar. É o tipo de filme que prova que, se o roteiro for bom, a nostalgia nunca sai de moda.</p>
 
-            <!-- BLOCO VISUAL -->
+            <!-- Bloco Visual Split -->
             <div class="split-content">
-                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\o-diabo-veste-prada-2\o-diabo-veste-prada-2-film.webp">
-                <p class="texto-justificado">Se na prequel tivemos aquele primeiro contato deslumbrado com o epicentro da fina costura, agora o reencontro é um pouco menos glamouroso
-                    para a protagonista. Ela acaba caindo em um rixa empresarial que desaba conforme a trama avança. Além do elenco principal, bons acréscimos
-                    de personagens aqui e ali são muito bem aproveitados com algumas belas participações especiais é claro. As rápidas alfinetadas
-                    finas estão muito presentes e uma nova postura não vista antes da Miranda traz mais uma série de cenas humoradas.
-                    Mas, como nem tudo são looks impecáveis, alguns raros eventos parecem "convenientes demais" para fazer a história andar.</p>
+                <img src="assets/imagens/filmes/o-diabo-veste-prada-2/o-diabo-veste-prada-2-film.webp" alt="Cena do Filme">
+                <p class="texto-justificado">Se na prequel tivemos aquele primeiro contato deslumbrado com o epicentro da fina costura, agora o reencontro é um pouco menos glamouroso para a protagonista. Ela acaba caindo em um rixa empresarial que desaba conforme a trama avança. Além do elenco principal, bons acréscimos de personagens aqui e ali são muito bem aproveitados com algumas belas participações especiais é claro. As rápidas alfinetadas finas estão muito presentes e uma nova postura não vista antes da Miranda traz mais uma série de cenas humoradas. Mas, como nem tudo são looks impecáveis, alguns raros eventos parecem "convenientes demais" para fazer a história andar.</p>
             </div>
 
-            <!-- FRASE DE IMPACTO -->
+            <!-- Galeria de Screenshots -->
+            <div class="article-gallery">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-1.jpg" alt="Screenshot 1" onclick="window.open(this.src)">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-2.jpg" alt="Screenshot 2" onclick="window.open(this.src)">
+                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-image-3.jpg" alt="Screenshot 3" onclick="window.open(this.src)">
+            </div>
+
+            <!-- Citação -->
             <blockquote>
                 "Cortes tão sutis que dariam para cortar o tecido utilizado no filme"
             </blockquote>
 
-            <p class="texto-justificado">Mesmo com alguns tropeços, este é um desfile que merece o seu ingresso. O humor ácido foi atualizado com sucesso para a nova geração,
-                e O Diabo Veste Prada 2 entrega uma evolução real de todo o elenco principal — algo que, no primeiro filme, parecia restrito apenas à Andy.
-                No fim das contas, o filme serve look, serve drama e serve entretenimento. E então, o que está esperando para desfilar nessa passarela?
-            </p>
+            <p class="texto-justificado">Mesmo com alguns tropeços, este é um desfile que merece o seu ingresso. O humor ácido foi atualizado com sucesso para a nova geração, e O Diabo Veste Prada 2 entrega uma evolução real de todo o elenco principal — algo que, no primeiro filme, parecia restrito apenas à Andy. No fim das contas, o filme serve look, serve drama e serve entretenimento. E então, o que está esperando para desfilar nessa passarela?</p>
+
+            <!-- Resumo Prós e Contras -->
+            <div class="pros-cons-container">
+                <div class="pc-box pros">
+                    <h4><i class="icon">✔</i> O QUE É BOM</h4>
+                    <ul>
+                        <li>Atuações impecáveis do trio principal original.</li>
+                        <li>Roteiro ácido que entende bem o mercado atual.</li>
+                        <li>Figurino e design de produção deslumbrantes.</li>
+                    </ul>
+                </div>
+                <div class="pc-box cons">
+                    <h4><i class="icon">✖</i> O QUE NÃO É BOM</h4>
+                    <ul>
+                        <li>Algumas conveniências de roteiro no segundo ato.</li>
+                        <li>Certas subtramas secundárias ficam sem conclusão.</li>
+                        <li>O ritmo cai um pouco perto do desfecho.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assinatura -->
+            <div class="author-signature">
+                <p>Escrito por <strong>Danilo José</strong></p>
+                <div class="sig-line"></div>
+            </div>
 
         </article>
     </main>
 
-    <!-- RODAPÉ -->
+    <!-- === INTERAÇÃO === -->
+    <div class="container">
+        <div class="share-box">
+            <span>CURTIU? COMPARTILHE:</span>
+            <div class="share-icons">
+                <a href="#" class="share-btn">Twitter</a>
+                <a href="#" class="share-btn">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+<!-- === SEÇÃO DE COMENTÁRIOS === -->
+    <section class="comments-section">
+        <div class="container-comments">
+            <h3>Discussão e Opiniões</h3>
+            <div class="comment-form">
+                <textarea placeholder="O que você achou dessa obra?"></textarea>
+                <button class="btn-comment">Publicar Comentário</button>
+            </div>
+            
+            <div class="comments-list">
+                <!-- Comentários apareceriam aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- === RODAPÉ === -->
     <footer>
         <div class="container footer-content">
-
             <div class="about-card">
                 <h3>SOBRE O AUTOR</h3>
-                <p>Seu texto</p>
+                <p>Bibliotecário e entusiasta da sétima arte, analisando desde clássicos cult até as continuações mais inesperadas do mainstream.</p>
             </div>
-
             <div class="footer-meta">
                 <p>FLASHPOINT &copy; 2026</p>
             </div>
-
         </div>
     </footer>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 
 </body>
 </html>

@@ -416,3 +416,399 @@ footer { background: #111; padding: 5rem 0 3rem; color: #888; }
             .split-content img { width: 100%; }
             .main-img { height: 300px; }
         }
+
+
+        /* ==========================================================================
+   TAGS DE CARACTERIZAÇÃO
+   Estilo para as pílulas de categorias logo abaixo do título
+   ========================================================================== */
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--off-white);
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   ASSINATURA DO AUTOR
+   Cria um destaque sutil para quem escreveu a resenha
+   ========================================================================== */
+.author-signature {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: right;
+}
+
+.author-signature p {
+    font-size: 1rem;
+    color: var(--gray-text);
+    margin-bottom: 5px;
+}
+
+.sig-line {
+    width: 100px;
+    height: 3px;
+    background: var(--purple);
+    margin-left: auto;
+}
+
+/* ==========================================================================
+   SESSÃO DE COMENTÁRIOS
+   Área de interação ao final da página
+   ========================================================================== */
+.comments-section {
+    background: #f1f1f1;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.container-comments {
+    max-width: var(--text-width); /* Mantém o alinhamento com o texto da resenha */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.comments-section h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-text);
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-comment {
+    background: var(--dark-text);
+    color: var(--green);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-comment:hover {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.comments-list {
+    margin-top: 3rem;
+}
+
+.comment-item {
+    display: flex;
+    gap: 1rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.comment-avatar {
+    width: 45px;
+    height: 45px;
+    background: #ddd;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.comment-user {
+    font-weight: 800;
+    color: var(--dark-text);
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* ==========================================================================
+   FICHA TÉCNICA
+   Organiza os dados objetivos em uma grade sutil
+   ========================================================================== */
+.technical-sheet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background: #fdfdfd;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.sheet-item {
+    font-size: 0.8rem;
+    color: var(--gray-text);
+}
+
+.sheet-item strong {
+    color: var(--dark-text);
+    margin-right: 5px;
+}
+
+/* ==========================================================================
+   SISTEMA DE PRÓS E CONTRAS
+   Layout em duas colunas que se empilham no mobile
+   ========================================================================== */
+.pros-cons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.pc-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.pc-box h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Cores específicas para Prós */
+.pros { 
+    background-color: #f0fff4; /* Verde bem claro */
+    border-left: 5px solid var(--green);
+}
+.pros h4 { color: #27ae60; }
+
+/* Cores específicas para Contras (Criei uma cor negativa sutil) */
+.cons { 
+    background-color: #fff5f5; /* Vermelho bem claro */
+    border-left: 5px solid #6a11cb;
+}
+.cons h4 { color: #6a11cb; }
+
+.pc-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pc-box li {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 10px;
+    color: var(--dark-text);
+}
+
+/* Responsividade para Prós e Contras */
+@media (max-width: 768px) {
+    .pros-cons-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* ==========================================================================
+   BARRA DE PROGRESSO
+   Fica fixa no topo e cresce conforme o scroll
+   ========================================================================== */
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 2000; /* Garante que fique acima de tudo */
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--green); /* Cor de destaque */
+    width: 0%;
+}
+
+/* ==========================================================================
+   GALERIA DE IMAGENS
+   Organiza screenshots de forma elegante
+   ========================================================================== */
+.article-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 2.5rem 0;
+}
+
+.article-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.article-gallery img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Ajuste Mobile para Galeria */
+@media (max-width: 600px) {
+    .article-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Melhoria para citações e nota em telas pequenas */
+@media (max-width: 480px) {
+    blockquote {
+        font-size: 1.6rem; /* Diminui a fonte da frase de destaque */
+        padding-left: 1rem;
+    }
+    
+    .score-box {
+        padding: 5px 15px; /* Deixa a caixa de nota mais compacta */
+    }
+    
+    .score-number {
+        font-size: 2rem;
+    }
+}
+
+
+/* Efeito de profundidade na imagem de destaque */
+.main-img {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+/* Quando o usuário passa o mouse, ela dá um zoom sutil */
+.main-img-wrapper:hover .main-img {
+    transform: scale(1.02);
+}
+
+
+/* Estilo para a primeira letra do primeiro parágrafo */
+.article-body > p:first-letter {
+    font-family: 'Barlow Condensed', sans-serif;
+    float: left;
+    font-size: 4.5rem;
+    line-height: 3.5rem;
+    padding-right: 10px;
+    padding-top: 4px;
+    color: var(--purple);
+    font-weight: 800;
+}
+
+/* Melhora o conforto visual do texto */
+.article-body {
+    hyphens: auto; /* Quebra palavras se necessário para evitar espaços grandes */
+}
+
+.article-body p {
+    margin-bottom: 2rem; /* Aumenta o respiro entre parágrafos */
+}
+
+/* Seleção de texto personalizada com a cor do site */
+::selection {
+    background: var(--purple);
+    color: white;
+}
+
+.share-box {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-top: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.share-btn {
+    text-decoration: none;
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.share-btn:hover {
+    background: var(--purple);
+    color: white;
+}
+
+.status-disponivel {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    color: var(--accent); /* Ou a cor de destaque do seu site */
+}
+
+.platform-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+
+.availability-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;         /* Espaço em relação ao que vem antes */
+    margin-bottom: 30px;      /* AQUI ESTÁ O SEGREDO: Separa da nota abaixo */
+    width: 100%;
+}
+
+.availability-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--purple);
+}
+
+.availability-platforms {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.platform-chip {
+    background: var(--purple);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
