@@ -6,16 +6,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite acentos -->
+    <!-- Suporte a acentos -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Responsividade -->
 
-    <title>unknowz | FlashPoint</title>
+    <title>FlashPoint | O Diabo Veste Prada 2</title>
     <!-- Nome da aba -->
 
     <link rel="stylesheet" href="../../style.css">
-    <!-- CSS global do site -->
+    <!-- CSS global (reutilizado do site inteiro) -->
 
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Fontes -->
@@ -25,7 +25,7 @@
 
 <body>
 
-    <!-- Inputs herdados do sistema do index -->
+    <!-- SISTEMA DE ABAS (mantido por padrão do site) -->
     <input type="radio" name="tabs" id="home" checked>
     <input type="radio" name="tabs" id="jogos">
     <input type="radio" name="tabs" id="livros">
@@ -37,7 +37,7 @@
     <header>
         <div class="container header-flex">
 
-            <!-- Logo leva pra home -->
+            <!-- Logo redireciona para home -->
             <label class="logo-btn" onclick="window.location.href='../../index.html'">
                 <div class="logo">FLASH<span>POINT</span></div>
             </label>
@@ -49,55 +49,47 @@
     <!-- MENU -->
     <nav>
         <div class="container nav-scroll">
-
-            <!-- Links para categorias -->
+            <!-- Redirecionamento direto para abas da home -->
             <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
             <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
             <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
             <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
             <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
-
         </div>
     </nav>
 
     <!-- CONTEÚDO -->
     <main class="main-wrapper">
 
-        <!-- TOPO DO ARTIGO -->
+        <!-- HERO -->
         <section class="article-hero">
             <div class="hero-container">
 
                 <div class="header-meta-wrapper">
-                        <!-- BOTÃO VOLTAR -->
+
+                    <!-- BOTÃO VOLTAR -->
                     <a href="../../index.html">← VOLTAR</a>
-                    
 
                     <!-- TÍTULO -->
                     <div class="title-area">
-                        <h1>unknowz</h1>
-                        <h2>Uma curta e cooperativa aventura piratesca</h2>
-                        
-                                                <!-- Botão voltar -->
-                                            
-                                            
-                        
+                        <h1>Palm Springs</h1>
+                        <h2>Loop do tempo de uma forma que você nunca viu.</h2>
                         <!-- ALTERE AQUI -->
                     </div>
 
-                    <!-- NOTA -->
+                    <!-- NOTA + INFO -->
                     <div class="score-row">
 
                         <div class="score-box">
-                            <span class="score-number">6.5</span>
+                            <span class="score-number">9</span>
                             <!-- ALTERE A NOTA -->
 
-                            <span class="score-txt">Nota<br> Flash <br></span>
+                            <span class="score-txt">Nota<br>Flash</span>
                         </div>
 
-                        <!-- INFO -->
                         <div class="meta-info">
-                            <span><b>DATA:</b> 03 MAI, 2026</span>
-                            <span><b>ID:</b> Uknowz</span>
+                            <span><b>DATA:</b> 11 MAI, 2026</span>
+                            <span><b>ID:</b> palm-springs</span>
                         </div>
 
                     </div>
@@ -107,33 +99,36 @@
 
         <!-- IMAGEM PRINCIPAL -->
         <div class="main-img-wrapper">
-            <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\jogos\unknowz\unknowz-header.jpg" class="main-img" alt="">
+            <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\palm-springs\palm-springs-header.png" class="main-img" alt="">
             <!-- TROQUE A IMAGEM -->
         </div>
 
         <!-- TEXTO -->
         <article class="article-body">
 
-            <p class="texto-justificado">   Aventure-se em uma curta e cooperativa aventura com dois piratas (um vivo, e outro nem tanto) nesse simples, porém
-                entretivel jogo de plataforma. E como em todo jogo do gênero enfrente inimigos, resolva puzzles, e se estresse com seu companheiro marujo
-                enquanto passeia pelos cenários coloridos e praianos em alto mar.</p>
+            <p class="texto-justificado">Com um 1° filme tão bom esperava-se que essa fosse uma daquelas continuações que ninguém pediu, mas que, surpreendentemente, não é uma peça de se jogar fora. 
+                A sequência do clássico de 20 anos atrás traz uma história bem alinhada com a era digital (e trabalhista?) sem abrir mão da sofisticação e daquele
+                tratamento passivo-agressivo que a gente já ama odiar. É o tipo de filme que prova que, se o roteiro for bom, a nostalgia nunca sai de moda.
+            </p>
 
-            <!-- BLOCO COM IMAGEM -->
+            <!-- BLOCO VISUAL -->
             <div class="split-content">
-                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\jogos\unknowz\unknowz-ingame.jpg">
-                <p class="texto-justificado">   Como nem sempre da pra ir a praia sem se queimar com o sol, nem tudo é um dia ensolarado em Unknowz,
-                    a movimentação dos personagens, principalmente no pulo, deixa um pouco a desejar na responsividade do comando, e a movimentação
-                    dos personagens acaba ficando bem desengonçada, ei não é por que são piratas que eles tem que se movimentar como bebados certo?</p>
+                <img src="C:\Users\danil\Desktop\FlashPoint\assets\imagens\filmes\o-diabo-veste-prada-2\o-diabo-veste-prada-2-film.webp">
+                <p class="texto-justificado">Se na prequel tivemos aquele primeiro contato deslumbrado com o epicentro da fina costura, agora o reencontro é um pouco menos glamouroso
+                    para a protagonista. Ela acaba caindo em um rixa empresarial que desaba conforme a trama avança. Além do elenco principal, bons acréscimos
+                    de personagens aqui e ali são muito bem aproveitados com algumas belas participações especiais é claro. As rápidas alfinetadas
+                    finas estão muito presentes e uma nova postura não vista antes da Miranda traz mais uma série de cenas humoradas.
+                    Mas, como nem tudo são looks impecáveis, alguns raros eventos parecem "convenientes demais" para fazer a história andar.</p>
             </div>
 
             <!-- FRASE DE IMPACTO -->
             <blockquote>
-                "Simples, curto, bonito e que tal jogar um barril de pólvora no X?"
+                "Cortes tão sutis que dariam para cortar o tecido utilizado no filme"
             </blockquote>
 
-            <p class="texto-justificado">   Por mais que possua alguns crimes em alto mar, Unknowz ainda assim é uma aventura que vale a pena ser tripulada
-                pois sendo rápida garante um entretimento justo a você e mais um marinheiro que esteja disposto a navegar nessas águas, e claro o jogo é gratis
-                então o que está esperando para ver o que a maré vai lhe trazer hoje?
+            <p class="texto-justificado">Mesmo com alguns tropeços, este é um desfile que merece o seu ingresso. O humor ácido foi atualizado com sucesso para a nova geração,
+                e O Diabo Veste Prada 2 entrega uma evolução real de todo o elenco principal — algo que, no primeiro filme, parecia restrito apenas à Andy.
+                No fim das contas, o filme serve look, serve drama e serve entretenimento. E então, o que está esperando para desfilar nessa passarela?
             </p>
 
         </article>
