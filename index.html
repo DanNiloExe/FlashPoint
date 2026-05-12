@@ -28,6 +28,8 @@
             <!-- LOGO / BOTÃO HOME -->
             <label for="home" class="logo-btn" onclick="window.location.href='index.html'">
                 <div class="logo">FLASH<span>POINT</span></div>
+
+
             </label>
 
             <!-- TAGLINE -->
@@ -46,11 +48,54 @@
             <label for="filmes">FILMES</label>
             <label for="series">SÉRIES</label>
             <label for="musica">MÚSICA</label>
-
+            
+            <!-- ============pesquisa=================================== -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Buscar" class="search-input">
+                    <button type="submit" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </nav>
 
-    <!-- ===============CONTEÚDO PRINCIPAL============================= -->
+
+                <!-- ===============Calendario de lançamentos============================= -->
+            <section class="releases-bar">
+                <div class="container">
+                    <div class="releases-flex">
+                        <div class="releases-header">
+                            <span class="pulse-icon"></span>
+                            <span class="releases-title">Lançamentos aguardados</span>
+                        </div>
+                        <div class="releases-list">
+                            <!-- Item 1 -->
+                            <div class="release-item">
+                                <span class="day">22</span>
+                                <span class="month">MAI</span>
+                                <p>LEGO Batman Legacy of the Dark Knight</p>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="release-item">
+                                <span class="day">27</span>
+                                <span class="month">MAI</span>
+                                <p>I, God - XLOV</p>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="release-item">
+                                <span class="day">28</span>
+                                <span class="month">MAI</span>
+                                <p>Backrooms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    <!-- ===============Banner de Destaque============================= -->
     <main class="main-wrapper">
         <div class="container">
 
@@ -67,6 +112,7 @@
                 <!-- GRID DE CARDS -->
                 <div class="card-grid">
 
+                    
                     <!-- ========CARD — PALM SPRINGS==================================== -->
                     <a href="reviews/filmes/palm-springs.html" class="card-link">
                         <article class="review-card">
@@ -161,9 +207,9 @@
                     </a>
 
                 </div>
-
             </section>
 
+    
             <!-- ==========ABA — JOGOS=========================== -->
             <section class="tab-content" id="content-jogos">
                 <div class="section-header">
@@ -366,8 +412,59 @@
 
                 </div>
             </section>
-
+<!-- ==========consumindo=========================== -->
+<!-- Adicionada a classe 'mt-widget' para a margem superior -->
+<aside class="now-consuming-widget mt-widget">
+    <div class="widget-header">
+        <span class="status-dot"></span>
+        <h4>O que estamos consumindo atualmente</h4>
+    </div>
+    
+    <div class="consuming-content">
+        <!-- Exemplo com Capa Vertical -->
+        <div class="consuming-card vertical-layout">
+            <div class="consuming-cover">
+                <img src="assets/imagens/consumindo-atualmente/devoradores-de-estrelas.jpg" alt="Capa">
+            </div>
+            <div class="consuming-info">
+                <div class="consuming-tag">Lendo</div>
+                <h5>Devoradores de Estrelas</h5>
+                <p>Aproveitando uma boa ficção cientifíca enquanto anseia em ver sua adaptação cinematográfica.</p>
+                <div class="progress-mini"><div class="progress-fill" style="width: 70%;"></div></div>
+            </div>
         </div>
+    </div>
+
+    <div class="consuming-content">
+        <div class="consuming-card vertical-layout">
+            <div class="consuming-cover">
+                <img src="assets/imagens/consumindo-atualmente/dead-by-daylight.png" alt="Capa">
+            </div>
+            <div class="consuming-info">
+                <div class="consuming-tag">Jogando</div>
+                <h5>Dead by Daylight</h5>
+                <p>Todo mundo tem um jogo de conforto, e as vezes ele tá com o passe em vigor né.</p>
+                <div class="progress-mini"><div class="progress-fill" style="width: 100%;"></div></div>
+            </div>
+        </div>
+    </div>
+
+        <div class="consuming-content">
+        <div class="consuming-card vertical-layout">
+            <div class="consuming-cover">
+                <img src="assets/imagens/consumindo-atualmente/marvel-rivals.png" alt="Capa">
+            </div>
+            <div class="consuming-info">
+                <div class="consuming-tag">Jogando</div>
+                <h5>Marvel Rivals</h5>
+                <p>Herois, vilões, e tiros, é, eu não preciso de muito.</p>
+                <div class="progress-mini"><div class="progress-fill" style="width: 100%;"></div></div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
     </main>
 
     <!-- ==========================================================================
@@ -377,8 +474,33 @@
         <div class="container footer-content">
             <div class="about-card">
                 <h3>SOBRE O AUTOR</h3>
-                <p>Bibliotecário de formação e estudante de ADS.</p>
+                <p>Um bibliotecário de formação e estudante de ADS que gosta bastante de cultura pop o bastante para dedicar um tempinho as suas 
+                    mais variadas vertentes e comentar o mais abertamente e descontraidamente possível.</p>
             </div>
+
+ <!-- =================redes============================ -->
+            
+<div class="footer-socials">
+    <h4>Me encontre em outras redes</h4>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/danilo-josé-45890b343/" target="_blank" class="social-item">
+            <span class="social-icon">in</span> LinkedIn</a>
+        <a href="https://github.com/DanNiloExe" target="_blank" class="social-item">
+            <span class="social-icon">Gh</span> GitHub</a>
+        <a href="https://letterboxd.com/dan_nilo/" target="_blank" class="social-item">
+            <span class="social-icon">L</span> Letterboxd </a>
+         <a href="https://skoob.com.br/profile/6370627-dan-nilo" target="_blank" class="social-item">
+            <span class="social-icon">K</span> Skoob</a>
+        <a href="https://steamcommunity.com/profiles/76561198406960945/" target="_blank" class="social-item">
+            <span class="social-icon">S</span> Steam</a>
+        <a href="https://yourgamerprofile.com/BarryTroxa" target="_blank" class="social-item">
+            <span class="social-icon">YG</span> Your Gamer Profile</a>
+        <a href="https://www.albumoftheyear.org/user/dannilo/" target="_blank" class="social-item">
+            <span class="social-icon">AotY</span> Album ot the Year</a>
+    </div>
+</div>
+
+
 
             <div class="footer-meta">
                 <p>FLASHPOINT &copy; 2026</p>
