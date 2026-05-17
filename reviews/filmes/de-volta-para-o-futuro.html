@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix | FlashPoint</title>
+
+    <!-- ===============ESTILOS E FONTES================ -->
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- LOGICA DE NAVEGAÇÃO -->
+    <input type="radio" name="tabs" id="home" checked>
+    <input type="radio" name="tabs" id="jogos">
+    <input type="radio" name="tabs" id="livros">
+    <input type="radio" name="tabs" id="filmes">
+    <input type="radio" name="tabs" id="series">
+    <input type="radio" name="tabs" id="musica">
+
+    <!-- === HEADER === -->
+    <header>
+        <div class="container header-flex">
+            <label class="logo-btn" onclick="window.location.href='../../index.html'">
+                <div class="logo">FLASH<span>POINT</span></div>
+            </label>
+            <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
+        </div>
+    </header>
+
+    <!-- === MENU DE NAVEGAÇÃO === -->
+    <nav>
+        <div class="container nav-scroll">
+            <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
+            <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
+            <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
+            <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
+            <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
+                        <!-- ============pesquisa=================================== -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Buscar" class="search-input">
+                    <button type="submit" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+
+        <!-- === CABEÇALHO DO ARTIGO (Hero) === -->
+        <section class="article-hero">
+            <div class="hero-container">
+                <div class="header-meta-wrapper">
+                    
+                    <a href="../../index.html" class="back-btn">← VOLTAR</a>
+                    
+                    <div class="title-area">
+                        <h1>De volta para o futuro</h1>
+                        <h2>Uma viagem no tempo leve, caótica e surpreendentemente carismática </h2>
+                        
+                        <!-- Tags de Caracterização -->
+                        <div class="article-tags">
+                            <span class="tag">Aventura</span>
+                            <span class="tag">Fiçção Científica</span>
+                            <span class="tag">Comédia</span>
+                        </div>
+
+                        <!-- Ficha Técnica -->
+                        <div class="technical-sheet">
+                            <div class="sheet-item"><strong>DIREÇÃO:</strong> Robert Zemeckis</div>
+                            <div class="sheet-item"><strong>ELENCO:</strong> Michael J. Fox, Christopher Lloyd</div>
+                            <div class="sheet-item"><strong>ROTEIRO:</strong> Bob Gale, Robert Zemeckis</div>
+                            <div class="sheet-item"><strong>PRODUÇÃO:</strong> Bob Gale, Neil Canton</div>
+                            <div class="sheet-item"><strong>GÊNERO:</strong> Aventura</div>
+                            <div class="sheet-item"><strong>DURAÇÃO:</strong> 116min</div>
+                            <div class="sheet-item"><strong>ANO DE LANÇAMENTO:</strong> 1985</div>
+                            <div class="sheet-item"><strong>PAÍS DE ORIGEM:</strong>Estados Unidos</div>
+                        </div>
+                    
+
+                        <!-- Bloco de Disponibilidade -->
+                        <div class="availability-card">
+                            <span class="availability-label">ONDE ASSISTIR:</span>
+                            <div class="availability-platforms">
+                                <span class="platform-chip"><i class="icon-play"></i> HBO MAX</span>
+                                <span class="platform-chip"><i class="icon-play"></i> Globo play</span>
+                            </div>
+                        </div>
+
+                    <!-- Bloco de Nota e Meta Info -->
+                    <div class="score-row">
+                        <div class="score-box">
+                            <span class="score-number">9</span>
+                            <span class="score-txt">Nota<br> Flash</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span><b style="color: var(--purple);">⏱</b> 5 MIN DE LEITURA</span>
+                            <span><b>DATA:</b> 17 MAI, 2026</span>
+                            <span><b>ID:</b> de volta para o futuro</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- === IMAGEM DE DESTAQUE === -->
+        <div class="main-img-wrapper">
+            <img src="../../assets/imagens/filmes/de-volta-para-o-futuro/de-volta-para-o-futuro-header.jpg" class="main-img" alt="de-volta-para-o-futuro Banner">
+        </div>
+
+        <!-- === CORPO DO TEXTO === -->
+        <article class="article-body">
+
+            <p class="texto-justificado"> Eu esperava uma suprema bomba da ficção científica e acabei encontrando uma ótima quase-comédia romântica
+                com viagem no tempo que eu facilmente assistiria numa sessão da tarde. E isso é um problema? Nem um pouco.
+                </p>
+
+            <!-- Bloco Visual Split -->
+            <div class="split-content">
+                <img src="../../assets/imagens/filmes/de-volta-para-o-futuro/de-volta-para-o-futuro-image-1.jpg" alt="Cena do Filme">
+            </div>
+
+                <p class="texto-justificado"> Eu genuinamente não sabia o que esperar quando finalmente fui assistir esse clássico. Desde o momento
+                    em que o Marty McFly chega ao passado e começa a encontrar versões mais jovens de pessoas que ele já conhecia, o filme consegue
+                    transformar situações simples em momentos extremamente divertidos. E claro, ele interfere muito mais do que deveria.
+                </p>
+
+                        <!-- Galeria de Screenshots -->
+            <div class="article-gallery">
+                <img src="../../assets/imagens/filmes/de-volta-para-o-futuro/de-volta-para-o-futuro-image-2.jpg" alt="Screenshot 1" onclick="window.open(this.src)">
+                <img src="../../assets/imagens/filmes/de-volta-para-o-futuro/de-volta-para-o-futuro-image-3.jpg" alt="Screenshot 2" onclick="window.open(this.src)">
+                <img src="../../assets/imagens/filmes/de-volta-para-o-futuro/de-volta-para-o-futuro-image-4.jpg" alt="Screenshot 3" onclick="window.open(this.src)">
+            </div>
+
+                <p class="texto-justificado">  O mais impressionante é como o filme faz a viagem no tempo parecer leve e natural. A todo momento
+                    as duas grandes metas do passado estão sendo trabalhadas, enquanto as cenas envolvendo os pais do Marty entregam quantidades
+                    absurdas de vergonha alheia — tanto nas situações românticas quanto nas familiares. Tem algo quase “cringe” em vários desses
+                    momentos, mas de um jeito extremamente carismático. E, considerando o quanto os pais fazem o espectador sofrer de vergonha,
+                    era inevitável que o filho também entregasse sua própria dose disso no show final.
+
+                </p>
+
+
+            <!-- Citação -->
+            <blockquote>
+                “De Volta para o Futuro transforma paradoxos temporais em puro entretenimento de sessão da tarde.”
+            </blockquote>
+
+            <p class="texto-justificado">O filme é muito bem montado em praticamente tudo o que propõe. O máximo de negatividade que eu conseguiria
+                apontar seriam alguns efeitos especiais, mas cara… 1985. Pra época, tudo funciona muito bem até hoje. E, como todo clássico filme de
+                sessão da tarde, existe aquela evolução pessoal acompanhada de uma lição de moral simples, mas eficiente.
+<br>
+Claro, não sem antes deixar um gancho completamente escancarado para a continuação.
+<br>
+No fim, De volta para o futuro é exatamente o tipo de viagem no tempo que vale o seu tempo.
+                </p>
+
+            <!-- Resumo Prós e Contras -->
+            <div class="pros-cons-container">
+                <div class="pc-box pros">
+                    <h4><i class="icon">✔</i> O QUE É BOM</h4>
+                    <ul>
+                        <li>Marty e Brown possuem uma química extremamente divertida.</li>
+                        <li>A viagem no tempo é simples de entender e muito bem utilizada.</li>
+                        <li>Humor, vergonha alheia e aventura funcionam juntos o tempo inteiro.</li>
+                    </ul>
+                </div>
+                <div class="pc-box cons">
+                    <h4><i class="icon">✖</i> O QUE NÃO É BOM</h4>
+                    <ul>
+                  
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assinatura -->
+            <div class="author-signature">
+                <p>Escrito por <strong>Danilo José</strong></p>
+                <div class="sig-line"></div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- === INTERAÇÃO === -->
+    <div class="container">
+        <div class="share-box">
+            <span>CURTIU? COMPARTILHE:</span>
+            <div class="share-icons">
+                <a href="#" class="share-btn">Twitter</a>
+                <a href="#" class="share-btn">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+<!-- === SEÇÃO DE COMENTÁRIOS === -->
+    <section class="comments-section">
+        <div class="container-comments">
+            <h3>Discussão e Opiniões</h3>
+            <div class="comment-form">
+                <textarea placeholder="O que você achou dessa obra?"></textarea>
+                <button class="btn-comment">Publicar Comentário</button>
+            </div>
+            
+            <div class="comments-list">
+                <!-- Comentários apareceriam aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- === RODAPÉ === -->
+    <footer>
+        <div class="container footer-content">
+            <div class="about-card">
+                <h3>SOBRE O AUTOR</h3>
+                <p>Um bibliotecário de formação e estudante de ADS que gosta bastante de cultura pop o bastante para dedicar um tempinho as suas 
+                    mais variadas vertentes e comentar o mais abertamente e descontraidamente possível.</p>
+            </div>
+
+ <!-- =================redes============================ -->
+            
+<div class="footer-socials">
+    <h4>Me encontre em outras redes</h4>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/danilojose-dev" target="_blank" class="social-item">
+            <span class="social-icon">in</span> LinkedIn</a>
+        <a href="https://github.com/DanNiloExe" target="_blank" class="social-item">
+            <span class="social-icon">Gh</span> GitHub</a>
+        <a href="https://letterboxd.com/dan_nilo/" target="_blank" class="social-item">
+            <span class="social-icon">L</span> Letterboxd </a>
+         <a href="https://skoob.com.br/profile/6370627-dan-nilo" target="_blank" class="social-item">
+            <span class="social-icon">K</span> Skoob</a>
+        <a href="https://steamcommunity.com/profiles/76561198406960945/" target="_blank" class="social-item">
+            <span class="social-icon">S</span> Steam</a>
+        <a href="https://yourgamerprofile.com/BarryTroxa" target="_blank" class="social-item">
+            <span class="social-icon">YG</span> Your Gamer Profile</a>
+        <a href="https://www.albumoftheyear.org/user/dannilo/" target="_blank" class="social-item">
+            <span class="social-icon">AotY</span> Album ot the Year</a>
+    </div>
+</div>
+
+
+            <div class="footer-meta">
+                <p>FLASHPOINT &copy; 2026
+                    <br>Todos os direitos reservados.
+                </p>
+            </div>
+    </footer>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+</body>
+</html>
