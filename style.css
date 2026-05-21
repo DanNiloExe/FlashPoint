@@ -348,15 +348,22 @@ input[type="radio"] {
     100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
 }
 
+-review-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 1rem;
+    background: var(--off-white);
+}
+
 
 /* DESTAQUE */
 /* --- Destaque Sutil --- */
 .featured-hero {
     width: 100%;
-    height: 50vh; /* Altura menor para ser mais discreto */
+    height: 50vh;
     min-height: 350px;
     background-color: #1a1a1e;
-    background-image: url('sua-imagem.jpg');
+    background-image: url('assets/imagens/filmes/obsessao/obsessao-header2.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -922,6 +929,8 @@ blockquote {
 
 /* TAGS */
 
+
+
 .article-tags {
     display: flex;
     flex-wrap: wrap;
@@ -966,6 +975,20 @@ blockquote {
 .consuming-info {
     flex-grow: 1;
 }
+/* tentando fazer 2 colunas*/
+.now-consuming-widget {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+}
+
+.now-consuming-widget .widget-header {
+    grid-column: 1 / -1;
+}
+
+.consuming-content {
+    width: 100%;
+}
 
 /* FICHA TÉCNICA */
 
@@ -1008,6 +1031,10 @@ blockquote {
     display: flex;
     gap: 8px;
     margin-top: 5px;}
+
+    .availability-platforms a {
+    text-decoration: none;
+}
 
 .platform-chip {
     background: var(--purple);

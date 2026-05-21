@@ -93,11 +93,39 @@
                 </div>
             </section>
 
+</section>
 
     <!-- ===============Banner de Destaque============================= -->
     <main class="main-wrapper">
-        <div class="container">
+<section class="featured-hero"
+style="background-image: url('assets/imagens/filmes/obsessao/obsessao-header2.jpg');">
 
+    <div class="hero-overlay">
+
+        <div class="container hero-content">
+
+            <span class="badge-subtle">
+                REVIEW EM DESTAQUE
+            </span>
+
+            <h2>Obsessão</h2>
+
+            <p>
+                Quando o desconforto humano consegue ser mais assustador
+                que qualquer entidade sobrenatural.
+            </p>
+
+            <a href="reviews/filmes/obsessao.html" class="btn-subtle">
+                LER REVIEW →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <div class="container">
 
             <!-- ==============HOME / RECENTES===================================== -->
             <section class="tab-content" id="content-home">
@@ -111,6 +139,27 @@
                 <!-- GRID DE CARDS -->
                 <div class="card-grid">
 
+
+<!-- ========CARD — obsessao ==================================== -->
+                    <a href="reviews/filmes/obsessao.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/imagens/filmes/obsessao/obsessao-header2.jpg" alt="Blade Runner">
+                                <div class="score-badge">10</div>
+                            </div>
+
+                            <div class="card-info">
+                                <span class="category">FILMES</span>
+                                <h3>Obsessão</h3>
+                                <p>Quando o amor deixa de ser carinho e se transforma em terror</p>
+                                
+                                <div class="card-footer">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="date">19 MAI</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
 
 <!-- ========CARD — dE VOLTA PARA O FUTURO ==================================== -->
                     <a href="reviews/filmes/de-volta-para-o-futuro.html" class="card-link">
@@ -206,25 +255,6 @@
                                 <div class="card-footer">
                                     <span class="stars">★★★★½</span>
                                     <span class="date">11 MAI</span></div>
-                            </div>
-                        </article>
-                    </a>
-
-                    <!-- =====CARD — DARKEST DUNGEON======================================= -->
-                    <a href="reviews/jogos/darkest-dungeon.html" class="card-link">
-                        <article class="review-card">
-                            <div class="card-media">
-                                <img src="assets/imagens/jogos/darkest-dungeon/darkest-dungeon-header.avif" alt="Darkest Dungeon">
-                                <div class="score-badge">9</div>
-                            </div>
-                            <div class="card-info">
-                                <span class="category">JOGOS</span>
-                                <h3>Darkest Dungeon</h3>
-                                <p>Um combate em turnos insano que testará seu limite ao máximo.</p>
-                                <div class="card-footer">
-                                    <span class="stars">★★★★½</span>
-                                    <span class="date">09 MAI</span>
-                                </div>
                             </div>
                         </article>
                     </a>
@@ -397,9 +427,6 @@
                             </div>
                         </article>
                     </a>
-
-                   
-
 <!-- ========CARD — dE VOLTA PARA O FUTURO ==================================== -->
                     <a href="reviews/filmes/de-volta-para-o-futuro.html" class="card-link">
                         <article class="review-card">
@@ -419,11 +446,26 @@
                             </div>
                         </article>
                     </a>
+<!-- ========CARD — obsessao ==================================== -->
+                    <a href="reviews/filmes/obsessao.html" class="card-link">
+                        <article class="review-card">
+                            <div class="card-media">
+                                <img src="assets/imagens/filmes/obsessao/obsessao-header2.jpg" alt="Blade Runner">
+                                <div class="score-badge">10</div>
+                            </div>
 
+                            <div class="card-info">
+                                <span class="category">FILMES</span>
+                                <h3>Obsessão</h3>
+                                <p>Quando o amor deixa de ser carinho e se transforma em terror</p>
+                                <div class="card-footer">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="date">19 MAI</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
                 </div>
-
-
-                
             </section>
 
             <!-- ==========================================================================
@@ -506,8 +548,22 @@
         <h4>O que estamos consumindo atualmente</h4>
     </div>
     
+
+   <div class="consuming-content">
+        <div class="consuming-card vertical-layout">
+            <div class="consuming-cover">
+                <img src="assets/imagens/consumindo-atualmente/plants-vs-zombies.jpg" alt="Capa">
+            </div>
+            <div class="consuming-info">
+                <div class="consuming-tag">Jogando</div>
+                <h5>Plants vs Zombies</h5>
+                <p>As vezes a nostálgia de um bom jogo é o que te faz bem.</p>
+                <div class="progress-mini"><div class="progress-fill" style="width: 69%;"></div></div>
+            </div>
+        </div>
+    </div>
+
     <div class="consuming-content">
-        <!-- Exemplo com Capa Vertical -->
         <div class="consuming-card vertical-layout">
             <div class="consuming-cover">
                 <img src="assets/imagens/consumindo-atualmente/devoradores-de-estrelas.jpg" alt="Capa">
@@ -516,7 +572,7 @@
                 <div class="consuming-tag">Lendo</div>
                 <h5>Devoradores de Estrelas</h5>
                 <p>Aproveitando uma boa ficção cientifíca enquanto anseia em ver sua adaptação cinematográfica.</p>
-                <div class="progress-mini"><div class="progress-fill" style="width: 70%;"></div></div>
+                <div class="progress-mini"><div class="progress-fill" style="width: 80%;"></div></div>
             </div>
         </div>
     </div>
@@ -610,9 +666,6 @@
 
     <!-- ==========================================================================
        SCRIPT — DETECÇÃO DE HASH DA URL
-       Permite abrir o index diretamente em uma aba específica
-       Exemplo:
-       index.html#jogos
        ========================================================================== -->
     <script>
         window.addEventListener("DOMContentLoaded", () => {
@@ -625,6 +678,29 @@
             }
         });
     </script>
+
+<!-- ==========================================================================
+       BOTAO ALEATOROI, ACRESCENTAR SEMPRE
+       ========================================================================== -->
+<script>
+function goToRandomReview() {
+    const reviews = [
+
+        "reviews/filmes/obsessao.html",
+        "reviews/filmes/blade-runner.html",
+        "reviews/filmes/matrix.html",
+        "reviews/filmes/palm-springs.html",
+        "reviews/filmes/de-volta-para-o-futuro.html",
+        "reviews/jogos/darkest-dungeon.html",
+        "reviews/jogos/unknowz.html",
+        "reviews/livros/devoradores-de-estrelas.html",
+        "reviews/musicas/heavy-serenade.html",
+    ];
+    const randomIndex = Math.floor(Math.random() * reviews.length);
+
+    window.location.href = reviews[randomIndex];
+}
+</script>
 
 </body>
 </html>
