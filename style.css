@@ -357,7 +357,17 @@ input[type="radio"] {
 
 
 /* DESTAQUE */
-/* --- Destaque Sutil --- */
+
+/* BANNER APARECE APENAS NA HOME */
+
+#jogos:checked ~ .main-wrapper .featured-hero,
+#livros:checked ~ .main-wrapper .featured-hero,
+#filmes:checked ~ .main-wrapper .featured-hero,
+#series:checked ~ .main-wrapper .featured-hero,
+#musica:checked ~ .main-wrapper .featured-hero {
+    display: none;
+}
+
 .featured-hero {
     width: 100%;
     height: 50vh;

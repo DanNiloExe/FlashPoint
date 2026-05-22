@@ -15,18 +15,18 @@ O projeto adota uma arquitetura de caminhos relativos rigorosa para separação 
 │   └── imagens/
 │       ├── consumindo-atualmente/      # Destaques da página principal
 │       ├── filmes/
-│       │   └── blade-runner/ # Imagens internas do filme
-│       │   └── de-volta-para-o-futuro/ # Imagens internas do filme
-│       │   └── matrix/ # Imagens internas da obra
-│       │   └── o-diabo-veste-prada-2/ # Imagens internas do filme
-│       │   └── palm-springs/ # Imagens internas do filme
+│       │   └── blade-runner/             # Imagens internas do filme
+│       │   └── de-volta-para-o-futuro/   # Imagens internas do filme
+│       │   └── matrix/                   # Imagens internas da obra
+│       │   └── o-diabo-veste-prada-2/    # Imagens internas do filme
+│       │   └── palm-springs/             # Imagens internas do filme
 │       ├── jogos/
-│       │   └── darkest-dungeon/ # Imagens internas do jogo
-│       │   └── unknowz/ # Imagens internas do jogo
+│       │   └── darkest-dungeon/          # Imagens internas do jogo
+│       │   └── unknowz/                  # Imagens internas do jogo
 │       ├── livros/
-│       │   └── devoradores-de-estrelas/ # Imagens internas da obra
+│       │   └── devoradores-de-estrelas/  # Imagens internas da obra
 │       ├── musica/
-│       │   └── heavy-serenade/         # Imagens internas do álbum
+│       │   └── heavy-serenade/           # Imagens internas do álbum
 │       └── series/
 ├── reviews/
 │   ├── filmes/
