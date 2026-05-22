@@ -1386,3 +1386,51 @@ footer {
 }
 
 
+
+
+
+
+#search-results{
+    position: absolute;
+    top: 110%;
+    right: 0;
+
+    width: 320px;
+
+    background: #111;
+    border: 1px solid #222;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+.search-result-item{
+    display: flex;
+    gap: 12px;
+
+    padding: 12px;
+
+    text-decoration: none;
+    color: white;
+
+    transition: 0.2s;
+}
+
+.search-result-item:hover{
+    background: #1a1a1a;
+}
+
+.search-result-item img{
+    width: 60px;
+    height: 80px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.search-result-info h4{
+    margin: 4px 0;
+}
