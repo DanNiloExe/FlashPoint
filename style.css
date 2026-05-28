@@ -307,17 +307,17 @@ input[type="radio"] {
 
 .releases-list {
     display: flex;
-    gap: 2.5rem;
-    overflow-x: auto; /* Permite scroll se tiver muitos lançamentos */
-    scrollbar-width: none;
+    gap: 2rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
+
 .release-item {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
-    gap: 12px;
-    min-width: 200px;
+    gap: 10px;
+    white-space: nowrap;
 }
 
 .release-item .day {
@@ -340,6 +340,14 @@ input[type="radio"] {
     color: #bbb;
     font-weight: 600;
     line-height: 1.2;
+}
+
+.release-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--purple);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 @keyframes pulse {
