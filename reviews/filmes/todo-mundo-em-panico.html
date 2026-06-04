@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Mundo em Pânico  | FlashPoint</title>
+
+    <!-- ===============ESTILOS E FONTES================ -->
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/176fb25782e/bf84867vgb/300f5dae5e8ad8a7_complete.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- LOGICA DE NAVEGAÇÃO -->
+    <input type="radio" name="tabs" id="home" checked>
+    <input type="radio" name="tabs" id="jogos">
+    <input type="radio" name="tabs" id="livros">
+    <input type="radio" name="tabs" id="filmes">
+    <input type="radio" name="tabs" id="series">
+    <input type="radio" name="tabs" id="musica">
+
+    <!-- === HEADER === -->
+    <header>
+        <div class="container header-flex">
+            <label class="logo-btn" onclick="window.location.href='../../index.html'">
+                <div class="logo">FLASH<span>POINT</span></div>
+            </label>
+            <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
+        </div>
+    </header>
+
+    <!-- === MENU DE NAVEGAÇÃO === -->
+    <nav>
+        <div class="container nav-scroll">
+            <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
+            <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
+            <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
+            <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
+            <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
+                        <!-- ============pesquisa=================================== -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Buscar" class="search-input">
+                    <button type="submit" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+
+        <!-- === CABEÇALHO DO ARTIGO (Hero) === -->
+        <section class="article-hero">
+            <div class="hero-container">
+                <div class="header-meta-wrapper">
+                    
+                    <a href="../../index.html" class="back-btn">← VOLTAR</a>
+                    
+                    <div class="title-area">
+                        <h1>Todo Mundo em Pânico</h1>
+                        <h2>Uma Metralhadora de Piadas Que Ainda Acerta o Alvo</h2>
+                        
+                        <!-- Tags de Caracterização -->
+                    <div class="article-tags">
+                        <span class="tag">Comédia</span>
+                        <span class="tag">Paródia</span>
+                        <span class="tag">Terror</span>
+                    </div>
+
+                        <!-- Ficha Técnica -->
+                    <div class="technical-sheet">
+                        <div class="sheet-item"><strong>DIREÇÃO:</strong> Michael Tiddes</div>
+                        <div class="sheet-item"><strong>ELENCO:</strong> Anna Faris, Regina Hall, Marlon Wayans, Shawn Wayans</div>
+                        <div class="sheet-item"><strong>ROTEIRO:</strong> Marlon Wayans, Shawn Wayans, Keenen Ivory Wayans, Craig Wayans, Rick Alvarez</div>
+                        <div class="sheet-item"><strong>PRODUÇÃO:</strong> Marlon Wayans, Shawn Wayans, Keenen Ivory Wayans, Craig Wayans, Rick Alvarez</div>
+                        <div class="sheet-item"><strong>GÊNERO:</strong> Comédia</div>
+                        <div class="sheet-item"><strong>DURAÇÃO:</strong> 96min</div>
+                        <div class="sheet-item"><strong>ANO DE LANÇAMENTO:</strong> 2026</div>
+                        <div class="sheet-item"><strong>ESTÚDIO:</strong> Paramount Pictures</div>
+                    </div>
+
+                  
+                        <!-- Bloco de Disponibilidade -->
+                        <div class="availability-card">
+                            <span class="availability-label">ONDE ASSISTIR:</span>
+                            <div class="availability-platforms">
+                                <a href="https://www.ingresso.com/filme/todo-mundo-em-panico-2026" target="_blank" rel="noopener noreferrer"><span class="platform-chip"><i class="icon-play"></i> Cinemas</span></a>
+                            </div>
+                        </div>
+
+                    <!-- Bloco de Nota e Meta Info -->
+                    <div class="score-row">
+                        <div class="score-box">
+                            <span class="score-number">7</span>
+                            <span class="score-txt">Nota<br> Flash</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span><b style="color: var(--purple);">⏱</b> 5 MIN DE LEITURA</span>
+                            <span><b>DATA:</b> 04 JUN, 2026</span>
+                            <span><b>ID:</b> todo mundo em pânico</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- === IMAGEM DE DESTAQUE === -->
+        <div class="main-img-wrapper">
+            <img src="../../assets/imagens/filmes/todo-mundo-em-panico/todo-mundo-em-panico-header.png" class="main-img" alt="Todo mundo em panico Banner">
+        </div>
+
+        <!-- === CORPO DO TEXTO === -->
+        <article class="article-body">
+
+            <p class="texto-justificado">Bem, é Todo Mundo em Pânico. Não tem muito mistério aqui. Em teoria eu poderia gastar este texto inteiro falando sobre o filme, mas
+                provavelmente seria mais produtivo gastar esse tempo rindo dele. Afinal, é para isso que a franquia existe.
+
+Como era de se esperar, o filme é uma verdadeira metralhadora de piadas. Algumas passam direto pelo alvo, outras acertam em cheio e arrancam risadas genuínas. A boa notícia é que,
+na maior parte do tempo, a pontaria está bem calibrada.
+            </p>
+
+            <!-- Bloco Visual Split -->
+            <div class="split-content">
+                <img src="../../assets/imagens/filmes/todo-mundo-em-panico/todo-mundo-em-panico-image-1.jpg" alt="Cena do Filme">
+            </div>
+
+                <p class="texto-justificado">
+            </p>
+
+            <p class="texto-justificado">
+                O longa pega emprestada a estrutura de outro filme, algo que já fica bem claro nos materiais promocionais e se torna ainda mais evidente conforme a história avança.
+                E isso acaba ajudando bastante. Em vez de apenas jogar referências aleatórias na tela, existe uma base narrativa que serve como desculpa para encaixar as piadas, os
+                personagens e as inúmeras sátiras que aparecem durante a sessão.
+
+            </p>
+
+            <p class="texto-justificado">
+E quando digo inúmeras, são realmente muitas. O filme faz piada com cinema, televisão, celebridades, acontecimentos recentes e praticamente qualquer assunto que tenha rendido conversa
+nos últimos anos. Algumas referências são tão atuais que provavelmente vão envelhecer rápido, mas funcionam muito bem no momento. Outras são comentários sobre situações e discussões
+dos Estados Unidos que, por trás do exagero característico da franquia, acabam até funcionando como uma crítica social disfarçada.</p>
+
+                        <!-- Galeria de Screenshots -->
+            <div class="article-gallery">
+                <img src="../../assets/imagens/filmes/todo-mundo-em-panico/todo-mundo-em-panico-image-2.png" alt="Screenshot 1" onclick="window.open(this.src)">
+                <img src="../../assets/imagens/filmes/todo-mundo-em-panico/todo-mundo-em-panico-image-3.webp" alt="Screenshot 2" onclick="window.open(this.src)">
+                <img src="../../assets/imagens/filmes/todo-mundo-em-panico/todo-mundo-em-panico-image-4.jpg" alt="Screenshot 3" onclick="window.open(this.src)">
+            </div>
+
+<p class="texto-justificado">Outra coisa legal é ver os personagens clássicos de volta. Eles dividem espaço com uma nova geração, mas vamos ser sinceros: quando alguém da velha guarda
+    aparece em cena, é difícil não prestar mais atenção nele do que nos protagonistas novos. Não que os novatos sejam ruins, mas existe um carinho natural pelos personagens que
+    acompanharam a franquia desde o começo.</p>
+<p class="texto-justificado">
+Também não quero entrar muito em detalhes porque boa parte da graça está justamente em ser pego de surpresa. Tem piadas que funcionam melhor quando você não faz ideia de que estão
+chegando. Então quanto menos spoilers, melhor.
+            </p>
+
+            <!-- Citação -->
+            <blockquote class="texto-justificado">
+                "Diferente de alguns dos capítulos da franquia, este filme não parece apenas uma coleção de referências jogadas na tela, ele é uma uma coleção de referências jogadas na tela
+                ,só que agora existe uma história guiando a bagunça, e isso faz uma boa diferença."
+            </blockquote>
+
+            <p class="texto-justificado">
+Uma coisa que gostei foi perceber que o filme tenta contar uma história de verdade. Sim, ainda é um festival de referências e besteirol, mas agora existe uma linha de acontecimentos
+ligando tudo isso. Diferente de alguns capítulos mais recentes, que pareciam apenas um compilado de esquetes, aqui as piadas costumam surgir de situações que fazem sentido dentro da
+própria trama.</p>
+ <p class="texto-justificado">
+No final, Todo Mundo em Pânico não tenta ser mais inteligente do que precisa. Ele sabe exatamente o que é, sabe o que o público espera e entrega isso sem vergonha nenhuma. Algumas
+piadas vão funcionar melhor que outras, mas quando as luzes da sala acendem, a sensação é de que valeu a pena embarcar nessa bagunça.
+
+Então sim, corra para o cinema, entre em pânico e permita-se apenas rir.
+            </p>
+
+            <!-- Resumo Prós e Contras -->
+            <div class="pros-cons-container">
+                <div class="pc-box pros">
+                    <h4><i class="icon">✔</i> O QUE É BOM</h4>
+                    <ul>
+                        <li>Grande quantidade de referências que, em sua maioria, funcionam bem.</li>
+                        <li>Retorno dos personagens clássicos traz muito carisma ao filme.</li>
+                         <li>Narrativa mais organizada do que a de algumas sequências anteriores.</li>
+                    </ul>
+                </div>
+                <div class="pc-box cons">
+                    <h4><i class="icon">✖</i> O QUE NÃO É BOM</h4>
+                    <ul>
+                        <li>Algumas piadas dependem bastante do conhecimento das referências.</li>
+                        <li>O humor continua sendo extremamente específico e pode não agradar quem não gosta do estilo da franquia.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assinatura -->
+            <div class="author-signature">
+                <p>Escrito por <strong>Danilo José</strong></p>
+                <div class="sig-line"></div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- === INTERAÇÃO === -->
+    <div class="container">
+        <div class="share-box">
+            <span>CURTIU? COMPARTILHE:</span>
+            <div class="share-icons">
+                <a href="#" class="share-btn">Twitter</a>
+                <a href="#" class="share-btn">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+<!-- === SEÇÃO DE COMENTÁRIOS === -->
+    <section class="comments-section">
+        <div class="container-comments">
+            <h3>Discussão e Opiniões</h3>
+            <div class="comment-form">
+                <textarea placeholder="O que você achou dessa obra?"></textarea>
+                <button class="btn-comment">Publicar Comentário</button>
+            </div>
+            
+            <div class="comments-list">
+                <!-- Comentários apareceriam aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- === RODAPÉ === -->
+    <footer>
+        <div class="container footer-content">
+            <div class="about-card">
+                <h3>SOBRE O AUTOR</h3>
+                <p>Um bibliotecário de formação e estudante de ADS que gosta bastante de cultura pop o bastante para dedicar um tempinho as suas 
+                    mais variadas vertentes e comentar o mais abertamente e descontraidamente possível.</p>
+            </div>
+
+ <!-- =================redes============================ -->
+            
+<div class="footer-socials">
+    <h4>Me encontre em outras redes</h4>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/danilojose-dev" target="_blank" class="social-item">
+            <span class="social-icon">in</span> LinkedIn</a>
+        <a href="https://github.com/DanNiloExe" target="_blank" class="social-item">
+            <span class="social-icon">Gh</span> GitHub</a>
+        <a href="https://letterboxd.com/dan_nilo/" target="_blank" class="social-item">
+            <span class="social-icon">L</span> Letterboxd </a>
+         <a href="https://skoob.com.br/profile/6370627-dan-nilo" target="_blank" class="social-item">
+            <span class="social-icon">K</span> Skoob</a>
+        <a href="https://steamcommunity.com/profiles/76561198406960945/" target="_blank" class="social-item">
+            <span class="social-icon">S</span> Steam</a>
+        <a href="https://yourgamerprofile.com/BarryTroxa" target="_blank" class="social-item">
+            <span class="social-icon">YG</span> Your Gamer Profile</a>
+        <a href="https://www.albumoftheyear.org/user/dannilo/" target="_blank" class="social-item">
+            <span class="social-icon">AotY</span> Album ot the Year</a>
+    </div>
+</div>
+
+
+            <div class="footer-meta">
+                <p>FLASHPOINT &copy; 2026
+                    <br>Todos os direitos reservados.
+                </p>
+            </div>
+    </footer>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+</body>
+</html>

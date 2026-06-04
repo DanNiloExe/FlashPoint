@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backrooms: Um Não-Lugar | FlashPoint</title>
+
+    <!-- ===============ESTILOS E FONTES================ -->
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/176fb25782e/bf84867vgb/300f5dae5e8ad8a7_complete.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- LOGICA DE NAVEGAÇÃO -->
+    <input type="radio" name="tabs" id="home" checked>
+    <input type="radio" name="tabs" id="jogos">
+    <input type="radio" name="tabs" id="livros">
+    <input type="radio" name="tabs" id="filmes">
+    <input type="radio" name="tabs" id="series">
+    <input type="radio" name="tabs" id="musica">
+
+    <!-- === HEADER === -->
+    <header>
+        <div class="container header-flex">
+            <label class="logo-btn" onclick="window.location.href='../../index.html'">
+                <div class="logo">FLASH<span>POINT</span></div>
+            </label>
+            <p class="tagline">Resenhas rápidas, leves e bem humoradas.</p>
+        </div>
+    </header>
+
+    <!-- === MENU DE NAVEGAÇÃO === -->
+    <nav>
+        <div class="container nav-scroll">
+            <label onclick="window.location.href='../../index.html#jogos'">JOGOS</label>
+            <label onclick="window.location.href='../../index.html#livros'">LIVROS</label>
+            <label onclick="window.location.href='../../index.html#filmes'">FILMES</label>
+            <label onclick="window.location.href='../../index.html#series'">SÉRIES</label>
+            <label onclick="window.location.href='../../index.html#musica'">MÚSICA</label>
+                        <!-- ============pesquisa=================================== -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Buscar" class="search-input">
+                    <button type="submit" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+
+        <!-- === CABEÇALHO DO ARTIGO (Hero) === -->
+        <section class="article-hero">
+            <div class="hero-container">
+                <div class="header-meta-wrapper">
+                    
+                    <a href="../../index.html" class="back-btn">← VOLTAR</a>
+                    
+                    <div class="title-area">
+                        <h1>Backrooms: Um Não-Lugar</h1>
+                        <h2>Perdido Entre Corredores Amarelos</h2>
+                        
+                    <!-- Tags de Caracterização -->
+                    <div class="article-tags">
+                        <span class="tag">Terror Psicológico</span>
+                        <span class="tag">Mistério</span>
+                        <span class="tag">Ficção Científica</span>
+                    </div>
+
+                    <!-- Ficha Técnica -->
+                    <div class="technical-sheet">
+                        <div class="sheet-item"><strong>DIREÇÃO:</strong> Kane Parsons</div>
+                        <div class="sheet-item"><strong>ELENCO:</strong> Chiwetel Ejiofor, Renate Reinsve, Mark Duplass</div>
+                        <div class="sheet-item"><strong>ROTEIRO:</strong> Will Soodik</div>
+                        <div class="sheet-item"><strong>PRODUÇÃO:</strong> James Wan, Shawn Levy, Michael Clear</div>
+                        <div class="sheet-item"><strong>GÊNERO:</strong> Terror</div>
+                        <div class="sheet-item"><strong>DURAÇÃO:</strong> 111min</div>
+                        <div class="sheet-item"><strong>ANO DE LANÇAMENTO:</strong> 2026</div>
+                        <div class="sheet-item"><strong>ESTÚDIO:</strong> A24</div>
+                    </div>
+
+                        <!-- Bloco de Disponibilidade -->
+                        <div class="availability-card">
+                            <span class="availability-label">ONDE ASSISTIR:</span>
+                            <div class="availability-platforms">
+                                <a href="https://www.ingresso.com/filme/backrooms-um-nao-lugar" target="_blank" rel="noopener noreferrer"><span class="platform-chip"><i class="icon-play"></i> Cinemas</span></a>
+                            </div>
+                        </div>
+
+                    <!-- Bloco de Nota e Meta Info -->
+                    <div class="score-row">
+                        <div class="score-box">
+                            <span class="score-number">7</span>
+                            <span class="score-txt">Nota<br> Flash</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span><b style="color: var(--purple);">⏱</b> 5 MIN DE LEITURA</span>
+                            <span><b>DATA:</b> 04 JUN, 2026</span>
+                            <span><b>ID:</b> backrooms: um não-lugar</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- === IMAGEM DE DESTAQUE === -->
+        <div class="main-img-wrapper">
+            <img src="../../assets/imagens/filmes/backrooms/backrooms-header.jpg" class="main-img" alt="backrooms Banner">
+        </div>
+
+        <!-- === CORPO DO TEXTO === -->
+        <article class="article-body">
+
+            <p class="texto-justificado">Backrooms é um fenômeno das creepypastas da internet que tomou conta da timeline de muita gente nos últimos anos. A ideia gerou inúmeros
+                jogos, teorias e adaptações, mas agora retorna em sua forma mais ambiciosa: um longa-metragem dirigido por seu próprio criador original, que concebeu esse universo
+                ainda na adolescência. E já adiantando a resposta: o resultado diferente de grandes investimentos e blockbusters é uma boa trama.
+            </p>
+
+            <p class="texto-justificado">
+               Assim como no conceito que conquistou a internet, somos transportados para os anos 90 e aprisionados em um ambiente confuso, inóspito e desconfortável. Ao mesmo tempo,
+               existe algo estranhamente fascinante nesses corredores infinitos. As Backrooms lembram uma obra de arte surrealista, um espaço impossível cuja arquitetura parece ter
+               sido criada para provocar inquietação.
+            </p>
+
+            <!-- Bloco Visual Split -->
+            <div class="split-content">
+                <img src="../../assets/imagens/filmes/backrooms/backrooms-image-1.png" alt="Cena do Filme">
+            </div>
+
+<p class="texto-justificado">O filme é propositalmente monótono, e isso pode afastar parte do público. Existem protagonistas e uma narrativa humana acompanhando os acontecimentos,
+    mas nenhum deles consegue competir com o verdadeiro destaque da obra: o próprio ambiente. As Backrooms funcionam quase como um organismo vivo. Nunca sabemos o que existe atrás
+    da próxima parede, o que habita aquele espaço ou quais regras regem aquele lugar sem lógica aparente.
+            </p>
+            <p class="texto-justificado">
+ Apesar da ambientação ser o principal atrativo, não podemos esquecer que ainda estamos diante de um filme de terror — e de um terror profundamente psicológico. O longa explora esse
+ aspecto por meio de sessões de terapia que ajudam a construir o estado mental dos personagens. A primeira parece relativamente comum, mas a última se transforma em uma experiência
+ angustiante e desconfortável, elevando bastante a tensão emocional.
+            </p>
+
+
+                        <!-- Galeria de Screenshots -->
+            <div class="article-gallery">
+                <img src="../../assets/imagens/filmes/backrooms/backrooms-image-2.jpg" alt="Screenshot 1" onclick="window.open(this.src)">
+                <img src="../../assets/imagens/filmes/backrooms/backrooms-image-3.jpg" alt="Screenshot 2" onclick="window.open(this.src)">
+                <img src="../../assets/imagens/filmes/backrooms/backrooms-image-4.jpg" alt="Screenshot 3" onclick="window.open(this.src)">
+            </div>
+<p class="texto-justificado">O filme dedica um bom tempo para explorar as Backrooms, mas fica aquela sensação de que ainda havia mais a ser mostrado. Estamos falando de um complexo infinito de salas e
+corredores, então sempre existe espaço para novas descobertas. Se isso pode ser considerado um defeito, o outro seria justamente sua lentidão. Porém, é difícil criticar completamente
+essa característica quando ela parece fazer parte da própria proposta. Afinal, estamos acompanhando um filme sobre um lugar essencialmente monótono e repetitivo.</p>
+
+<p class="texto-justificado">A reta final entrega os momentos mais conflitantes da produção. Kane Pixels, responsável pelos curtas que popularizaram a franquia, assume aqui apenas a direção. O roteiro não foi
+escrito por ele, e isso pode causar estranhamento em quem acompanha seu trabalho há anos. Algumas escolhas narrativas podem dividir opiniões, mas dificilmente podem ser chamadas de
+ruins. Considerando toda a carga psicológica construída ao longo da obra, o desfecho funciona como uma conclusão definitiva e bastante concreta para a jornada apresentada.</p>
+            <!-- Citação -->
+            <blockquote class="texto-justificado">
+                "As Backrooms não são apenas o cenário do filme: são sua verdadeira protagonista, um organismo hostil e fascinante do qual nunca sabemos o que esperar."
+            </blockquote>
+
+<p class="texto-justificado">Então, vale a pena se perder nesse não-lugar? Se você aprecia terror psicológico, narrativas contemplativas e a sensação constante de desconforto proporcionada pelo desconhecido, a
+resposta é sim. Backrooms talvez não seja o filme que muitos imaginavam, mas certamente é uma experiência intrigante que entende muito bem o fascínio por trás desse estranho labirinto
+infinito.</p>
+
+
+            <!-- Resumo Prós e Contras -->
+            <div class="pros-cons-container">
+                <div class="pc-box pros">
+                    <h4><i class="icon">✔</i> O QUE É BOM</h4>
+                    <ul>
+                        <li>Atmosfera extremamente imersiva e desconfortável.</li>
+                        <li>As Backrooms são tratadas como uma verdadeira personagem da história.</li>
+                    </ul>
+                </div>
+                <div class="pc-box cons">
+                    <h4><i class="icon">✖</i> O QUE NÃO É BOM</h4>
+                    <ul>
+                        <li>Ritmo bastante lento e contemplativo.</li>
+                        <li>Explora menos ambientes do que o conceito permitiria.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assinatura -->
+            <div class="author-signature">
+                <p>Escrito por <strong>Danilo José</strong></p>
+                <div class="sig-line"></div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- === INTERAÇÃO === -->
+    <div class="container">
+        <div class="share-box">
+            <span>CURTIU? COMPARTILHE:</span>
+            <div class="share-icons">
+                <a href="#" class="share-btn">Twitter</a>
+                <a href="#" class="share-btn">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+<!-- === SEÇÃO DE COMENTÁRIOS === -->
+    <section class="comments-section">
+        <div class="container-comments">
+            <h3>Discussão e Opiniões</h3>
+            <div class="comment-form">
+                <textarea placeholder="O que você achou dessa obra?"></textarea>
+                <button class="btn-comment">Publicar Comentário</button>
+            </div>
+            
+            <div class="comments-list">
+                <!-- Comentários apareceriam aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- === RODAPÉ === -->
+    <footer>
+        <div class="container footer-content">
+            <div class="about-card">
+                <h3>SOBRE O AUTOR</h3>
+                <p>Um bibliotecário de formação e estudante de ADS que gosta bastante de cultura pop o bastante para dedicar um tempinho as suas 
+                    mais variadas vertentes e comentar o mais abertamente e descontraidamente possível.</p>
+            </div>
+
+ <!-- =================redes============================ -->
+            
+<div class="footer-socials">
+    <h4>Me encontre em outras redes</h4>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/danilojose-dev" target="_blank" class="social-item">
+            <span class="social-icon">in</span> LinkedIn</a>
+        <a href="https://github.com/DanNiloExe" target="_blank" class="social-item">
+            <span class="social-icon">Gh</span> GitHub</a>
+        <a href="https://letterboxd.com/dan_nilo/" target="_blank" class="social-item">
+            <span class="social-icon">L</span> Letterboxd </a>
+         <a href="https://skoob.com.br/profile/6370627-dan-nilo" target="_blank" class="social-item">
+            <span class="social-icon">K</span> Skoob</a>
+        <a href="https://steamcommunity.com/profiles/76561198406960945/" target="_blank" class="social-item">
+            <span class="social-icon">S</span> Steam</a>
+        <a href="https://yourgamerprofile.com/BarryTroxa" target="_blank" class="social-item">
+            <span class="social-icon">YG</span> Your Gamer Profile</a>
+        <a href="https://www.albumoftheyear.org/user/dannilo/" target="_blank" class="social-item">
+            <span class="social-icon">AotY</span> Album ot the Year</a>
+    </div>
+</div>
+
+
+            <div class="footer-meta">
+                <p>FLASHPOINT &copy; 2026
+                    <br>Todos os direitos reservados.
+                </p>
+            </div>
+    </footer>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+</body>
+</html>
